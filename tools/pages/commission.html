@@ -1,0 +1,56 @@
+---
+{"title":"Commission a Painting | Render in Your Room in 24 Hours | The Polycrafted","description":"Commission a custom large-scale painting for your home or project. Upload a photo of the wall, give us the dimensions, palette, budget tier and timeline, and receive a photoreal render in your room within 24 hours.","og":"og-commission.jpg"}
+---
+<section class="page-head">
+  <div class="wrap grid-2">
+    <div>
+      <div class="mono">Commission</div>
+      <h1>Get your render <i>in 24 hours.</i></h1>
+      <p class="lede">Upload one photo of the wall, tell us the dimensions and the palette, and you will have a photoreal render of a proposed piece in your room within 24 hours. No deposit until you approve it.</p>
+      <ul class="stack mono" style="margin-top:32px">
+        <li><span class="accent">01</span> &nbsp;Photo of the wall, straight on if possible</li>
+        <li><span class="accent">02</span> &nbsp;Wall width and ceiling height</li>
+        <li><span class="accent">03</span> &nbsp;Palette or materials in the room</li>
+        <li><span class="accent">04</span> &nbsp;Budget tier and timeline</li>
+      </ul>
+    </div>
+    <form class="form panel" data-endpoint="FORM_ENDPOINT" data-success="Received. Your render will be with you within 24 hours." enctype="multipart/form-data">
+      <input type="hidden" name="form" value="commission">
+      <input type="hidden" name="subject" value="New commission request (render in 24h)">
+      <div class="row">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="c-role">You are</label><select id="c-role" name="role"><option>Homeowner / collector</option><option>Interior designer</option><option>Staging company</option><option>Set decorator / production</option><option>Developer / hospitality</option><option>Other</option></select></div>
+      </div>
+      <div class="field"><label for="c-photo">Photo of the wall</label><input id="c-photo" name="room_photo" type="file" accept="image/*,.heic" required><div class="hint">JPG, PNG or HEIC. Straight on, lights on, furniture in place.</div></div>
+      <div class="row">
+        <div class="field"><label for="c-width">Wall width (ft)</label><input id="c-width" name="wall_width_ft" inputmode="decimal" placeholder="e.g. 14"></div>
+        <div class="field"><label for="c-height">Ceiling height (ft)</label><input id="c-height" name="ceiling_height_ft" inputmode="decimal" placeholder="e.g. 10"></div>
+      </div>
+      <div class="field"><label for="c-size">Artwork size you have in mind</label><select id="c-size" name="artwork_size"><option>Not sure, recommend one</option><option>36 x 48 in</option><option>48 x 60 in</option><option>60 x 72 in</option><option>72 x 96 in (6 x 8 ft)</option><option>84 x 84 in (7 x 7 ft)</option><option>Mural, 8 ft and up</option></select></div>
+      <div class="field"><label for="c-palette">Palette, mood, materials in the room</label><textarea id="c-palette" name="palette" placeholder="Colours, textures, what the room already has, what it is missing"></textarea></div>
+      <div class="row">
+        <div class="field"><label for="c-budget">Budget tier</label><select id="c-budget" name="budget_tier"><option>Studio tier, $4,000 to $8,000</option><option>Commission tier, $12,000 to $35,000</option><option>Mural, from $22,000</option><option>Not sure yet</option></select></div>
+        <div class="field"><label for="c-timeline">Needed by</label><select id="c-timeline" name="timeline"><option>Within 6 weeks</option><option>6 to 12 weeks</option><option>3 to 6 months</option><option>Flexible</option></select></div>
+      </div>
+      <div class="field"><label for="c-dust">Diamond dust finish</label><select id="c-dust" name="diamond_dust"><option>Show me both</option><option>Yes</option><option>No</option></select></div>
+      <div class="field"><label for="c-address">Project city</label><input id="c-address" name="city" placeholder="Los Angeles, Beverly Hills, Newport Beach..." autocomplete="address-level2"></div>
+      <div class="honey" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit" data-label="Send me the render">Send me the render</button>
+      <div class="form-status" role="status"></div>
+      <p class="form-note">Your photo is used only to produce your render. No deposit is taken until you approve it.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="grid-3">
+    <div><div class="mono eyebrow">Then</div><h3>Approve the render.</h3><p style="margin-top:12px">Revised until it is right. Deposit only after you say yes.</p></div>
+    <div><div class="mono eyebrow">Then</div><h3>Painted by hand in Los Angeles.</h3><p style="margin-top:12px">Studio tier 3 to 5 weeks, commission tier 6 to 10 weeks.</p></div>
+    <div><div class="mono eyebrow">Then</div><h3>Delivered and installed.</h3><p style="margin-top:12px">Crated, hung, packaging removed.</p></div>
+  </div>
+  <div class="btn-row"><a class="btn ghost" href="process.html">The full process</a></div>
+</section>
