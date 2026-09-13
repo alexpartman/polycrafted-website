@@ -42,8 +42,8 @@
         <li><span class="accent">04</span> &nbsp;Budget tier and timeline</li>
       </ul>
     </div>
-    <form class="form panel" data-endpoint="FORM_ENDPOINT" data-success="Received. Your render will be with you within 24 hours." enctype="multipart/form-data">
-      <input type="hidden" name="form" value="commission">
+    <form class="form panel" name="commission" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="website" data-success="Received. Your render will be with you within 24 hours." enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="commission">
       <input type="hidden" name="subject" value="New commission request (render in 24h)">
       <div class="row">
         <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>

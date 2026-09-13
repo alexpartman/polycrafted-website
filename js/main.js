@@ -29,7 +29,7 @@
   }
 
   // forms: post to the endpoint in data-endpoint, show status inline
-  document.querySelectorAll('form[data-endpoint]').forEach(function (form) {
+  document.querySelectorAll('form[data-netlify]').forEach(function (form) {
     var status = form.querySelector('.form-status');
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
@@ -37,12 +37,12 @@
       var btn = form.querySelector('[type=submit]');
       if (btn) { btn.disabled = true; btn.textContent = 'Sending'; }
       if (status) { status.textContent = ''; status.className = 'form-status'; }
-      fetch(form.dataset.endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json ? r.json().catch(function () { return {}; }) : {}; })
+      fetch('/', { method: 'POST', body: new FormData(form) })
+        .then(function (r) { if (!r.ok) throw new Error('bad'); return r; })
         .then(function () {
           form.reset();
           if (status) { status.textContent = form.dataset.success || 'Received. We reply within one business day.'; status.className = 'form-status ok'; }
-          if (form.dataset.download) { window.location.href = form.dataset.download; }
+          if (form.dataset.download) { window.location.href = form.dataset.download; } else if (form.getAttribute('action')) { window.location.href = form.getAttribute('action'); }
         })
         .catch(function () {
           if (status) { status.textContent = 'Something went wrong. Email info@thepolycrafted.com and we will take it from there.'; status.className = 'form-status err'; }

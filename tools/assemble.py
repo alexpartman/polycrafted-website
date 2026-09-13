@@ -44,11 +44,11 @@ HEAD = '''<!doctype html>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
-<link rel="canonical" href="https://thepolycrafted.com/{slug}">
+<link rel="canonical" href="https://thepolycrafted.com/{canon}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
-<meta property="og:url" content="https://thepolycrafted.com/{slug}">
+<meta property="og:url" content="https://thepolycrafted.com/{canon}">
 <meta property="og:image" content="https://thepolycrafted.com/images/site/{og}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/site/favicon.png">
@@ -65,7 +65,8 @@ for fn in sorted(os.listdir(SRC)):
     schema = ''
     if meta.get('schema'):
         schema = '<script type="application/ld+json">\n' + json.dumps(meta['schema'], indent=1) + '\n</script>\n'
-    html = HEAD.format(title=meta['title'], description=meta['description'], slug=fn, og=meta.get('og', 'og-home.jpg'), schema=schema)
+    html = HEAD.format(title=meta['title'], description=meta['description'], slug=fn, canon=('' if fn=='index.html' else fn), og=meta.get('og', 'og-home.jpg'), schema=schema)
+    if fn == 'thank-you.html': html = html.replace('<link rel="canonical"', '<meta name="robots" content="noindex">\n<link rel="canonical"')
     html += NAV + '\n' + body.strip() + '\n\n' + FOOTER + '\n</body>\n</html>\n'
     assert '—' not in html, fn + ' contains an em dash'
     open(os.path.join(ROOT, fn), 'w').write(html)

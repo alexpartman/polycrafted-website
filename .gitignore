@@ -1,5 +1,5 @@
 .DS_Store
 node_modules/
 .env
-_site.zip
+_*.zip
 images/source/wp-excluded-*

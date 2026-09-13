@@ -94,8 +94,8 @@
       <h2>The net price ladder as a PDF, for your specification binder.</h2>
       <p style="margin-top:20px">One page. Sizes, retail, trade net, diamond dust, lead times. Enter your work email and it downloads immediately.</p>
     </div>
-    <form class="form panel" data-endpoint="FORM_ENDPOINT" data-success="Thank you. Your download is starting." data-download="docs/polycrafted-trade-price-sheet.pdf">
-      <input type="hidden" name="form" value="price-sheet">
+    <form class="form panel" name="price-sheet" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="website" data-success="Thank you. Your download is starting." data-download="docs/polycrafted-trade-price-sheet.pdf">
+      <input type="hidden" name="form-name" value="price-sheet">
       <input type="hidden" name="subject" value="Trade price sheet download">
       <div class="field"><label for="ps-name">Name</label><input id="ps-name" name="name" required autocomplete="name"></div>
       <div class="field"><label for="ps-firm">Firm</label><input id="ps-firm" name="firm" autocomplete="organization"></div>
@@ -115,8 +115,8 @@
       <p style="margin-top:20px">Tell us who you are and what you are working on. We confirm your account within one business day and send the trade agreement and price sheet.</p>
       <p style="margin-top:16px" class="mono">Designers &middot; Stagers &middot; Set decorators &middot; Hospitality and multifamily developers &middot; Art consultants</p>
     </div>
-    <form class="form panel" data-endpoint="FORM_ENDPOINT" data-success="Received. We confirm trade accounts within one business day.">
-      <input type="hidden" name="form" value="trade-account">
+    <form class="form panel" name="trade-account" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="website" data-success="Received. We confirm trade accounts within one business day.">
+      <input type="hidden" name="form-name" value="trade-account">
       <input type="hidden" name="subject" value="New trade account request">
       <div class="row">
         <div class="field"><label for="ta-name">Name</label><input id="ta-name" name="name" required autocomplete="name"></div>

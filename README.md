@@ -1,6 +1,8 @@
 # The Polycrafted Art Studio website
 
-Static site (HTML, CSS, JS, no build step) served by GitHub Pages.
+Static site (HTML, CSS, JS, no build step). Preview on GitHub Pages, production deploy on Netlify (forms use Netlify Forms, same as liveinhomesla.com).
+
+Editing: page bodies live in `tools/pages/*.html`; run `python3 tools/assemble.py` to regenerate the root pages with the shared nav, head and footer.
 
 - `index.html`, `work.html`, `for-designers.html`, `process.html`, `commission.html`, `studio.html`, `contact.html`
 - `css/style.css` design tokens and components
