@@ -73,6 +73,12 @@
 .v2-close{padding:clamp(120px,16vw,220px) var(--gutter);text-align:center;border-top:1px solid var(--line)}
 .v2-close h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.5vw,96px);line-height:1;letter-spacing:-.02em;max-width:none}
 .v2-close .btn-row{justify-content:center}
+.v2-who{padding:clamp(72px,9vw,140px) var(--gutter);border-top:1px solid var(--line);background:var(--panel-2)}
+.v2-who .mono{margin-bottom:36px}
+.v2-who ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 var(--gutter)}
+.v2-who li{border-top:1px solid var(--line);padding:22px 0;font-family:var(--serif);font-size:clamp(24px,2.6vw,36px);line-height:1.1}
+.v2-who li small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:8px}
+@media(max-width:820px){.v2-who ul{grid-template-columns:1fr}}
 </style>
 
 <header class="v2-hero">
@@ -91,8 +97,20 @@
 </header>
 
 <section class="v2-state">
-  <h2>Anything you can imagine.<br><i>Nothing you have seen before.</i></h2>
-  <p>One artist, one studio, any medium. Every piece is designed around the room it will live in, shown to you in that room before it exists, then made by hand in Los Angeles. Nothing is repeated. Nothing is stocked.</p>
+  <h2>Art designed <i>with</i> the interior.<br>Not placed in it.</h2>
+  <p>One artist, one studio, any medium. We work alongside the people who shape rooms: the piece is composed for the space, its light, its palette and its scale, shown in that room before it exists, then made by hand in Los Angeles. Nothing is repeated. Nothing is stocked.</p>
+</section>
+
+<section class="v2-who">
+  <div class="mono">A service, for the people who shape rooms</div>
+  <ul>
+    <li>Interior designers<small>Trade net pricing, renders for client sign-off</small></li>
+    <li>Staging companies<small>Statement pieces that sell the house</small></li>
+    <li>Hotels and hospitality<small>Lobbies, suites, restaurants, at scale</small></li>
+    <li>Music and production<small>Studios, control rooms, sets</small></li>
+    <li>Private residences<small>Collectors and homeowners, one room at a time</small></li>
+    <li>Offices and commercial<small>Reception, boardroom, brand spaces</small></li>
+  </ul>
 </section>
 
 <figure class="v2-piece">
