@@ -12,3 +12,5 @@ Editing: page bodies live in `tools/pages/*.html`; run `python3 tools/assemble.p
 - `docs/` trade documents (price sheet PDF)
 
 Do not edit the live WordPress site. DNS is switched by Alex after approval.
+
+Deploy: `bash tools/deploy.sh "message"` from the Mac VM (token in ~/Projects/.polycrafted-deploy-token, never in the repo).
