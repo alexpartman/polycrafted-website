@@ -10,12 +10,10 @@ NAV = '''<nav class="nav" aria-label="Main">
     <a class="brand" href="index.html">The Polycrafted</a>
     <ul>
       <li><a href="work.html">Work</a></li>
-      <li><a href="for-designers.html">For Designers</a></li>
-      <li><a href="process.html">Process</a></li>
       <li><a href="studio.html">Studio</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="right"><a class="btn sm" href="commission.html">Get a render in 24h</a><button class="nav-toggle" aria-expanded="false">Menu</button></div>
+    <div class="right"><a class="btn sm" href="contact.html">Contact</a><button class="nav-toggle" aria-expanded="false">Menu</button></div>
   </div>
 </nav>'''
 
@@ -26,7 +24,7 @@ FOOTER = '''<footer>
       <p class="mono" style="margin-top:12px">Custom art studio, Los Angeles</p>
     </div>
     <div class="cols mono">
-      <a href="work.html">Work</a><a href="for-designers.html">For Designers</a><a href="process.html">Process</a><a href="commission.html">Commission</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a>
+      <a href="work.html">Work</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a>
     </div>
     <div class="cols mono">
       <a href="mailto:info@thepolycrafted.com">info@thepolycrafted.com</a>
@@ -66,7 +64,7 @@ for fn in sorted(os.listdir(SRC)):
     if meta.get('schema'):
         schema = '<script type="application/ld+json">\n' + json.dumps(meta['schema'], indent=1) + '\n</script>\n'
     html = HEAD.format(title=meta['title'], description=meta['description'], slug=fn, canon=('' if fn=='index.html' else fn), og=meta.get('og', 'og-home.jpg'), schema=schema)
-    if fn in ('thank-you.html','session.html','private.html'): html = html.replace('<link rel="canonical"', '<meta name="robots" content="noindex">\n<link rel="canonical"')
+    if fn in ('thank-you.html','session.html','private.html','home-v1.html','home-v2.html'): html = html.replace('<link rel="canonical"', '<meta name="robots" content="noindex">\n<link rel="canonical"')
     html += NAV + '\n' + body.strip() + '\n\n' + FOOTER + '\n</body>\n</html>\n'
     assert '—' not in html, fn + ' contains an em dash'
     open(os.path.join(ROOT, fn), 'w').write(html)

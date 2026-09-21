@@ -1,54 +1,77 @@
 ---
-{"title":"Studio | Alexandre Partouche, Artist | The Polycrafted, Los Angeles","description":"The Polycrafted is the Los Angeles studio of artist Alexandre Partouche: large-scale paintings, diamond dust on canvas, murals and custom objects made for specific interiors, with a formal creative background behind every piece.","og":"og-studio.jpg","schema":{"@context":"https://schema.org","@type":"Person","name":"Alexandre Partouche","alternateName":"Alex Partouche","jobTitle":"Artist","worksFor":{"@type":"Organization","name":"The Polycrafted Art Studio","url":"https://thepolycrafted.com/"},"address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA"},"sameAs":["https://www.instagram.com/thepolycrafted/"]}}
+{"title":"Studio | The Polycrafted, Los Angeles","description":"The Polycrafted is the Los Angeles studio of artist Alexandre Partouche. Large-scale paintings, murals, sculpture, furniture and objects, designed with the interior and made by hand.","og":"og-studio.jpg","schema":{"@context":"https://schema.org","@type":"Person","name":"Alexandre Partouche","alternateName":"Alex Partouche","jobTitle":"Artist","worksFor":{"@type":"Organization","name":"The Polycrafted Art Studio","url":"https://thepolycrafted.com/"},"address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA"},"sameAs":["https://www.instagram.com/thepolycrafted/"]}}
 ---
-<section class="page-head">
-  <div class="wrap grid-2">
+<style>
+.st-hero{padding:0 24px;margin-top:24px}
+.st-hero figure{margin:0;height:calc(100vh - 112px);min-height:480px;overflow:hidden;background:#DAD6CE}
+.st-hero img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.st{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.st-row{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--gutter);padding:clamp(56px,7vw,104px) 0;border-top:1px solid var(--line)}
+.st-row:first-of-type{border-top:0}
+.st-row h2{font-size:clamp(30px,3.8vw,52px)}
+.st-row .mono{margin-bottom:16px;display:block}
+.st-row p{font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:56ch}
+.st-row p+p{margin-top:1em}
+.st-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;margin-top:8px}
+.st-list div{padding:16px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px}
+.st-steps{counter-reset:s}
+.st-steps div{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.st-steps div::before{counter-increment:s;content:"0" counter(s);font-weight:600;font-size:11px;letter-spacing:.14em;padding-top:5px;color:var(--ink-2)}
+.st-steps b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.st-steps p{font-size:16px;max-width:60ch}
+.st-close{padding:clamp(64px,8vw,120px) var(--gutter);text-align:center;border-top:1px solid var(--line)}
+.st-close h2{max-width:none;font-size:clamp(28px,3.6vw,48px)}
+.st-close .btn-row{justify-content:center;margin-top:28px}
+@media(max-width:820px){.st-hero{padding:0 16px;margin-top:16px}.st-hero figure{height:60vh;min-height:360px}.st-row{grid-template-columns:1fr;gap:20px}.st-list{grid-template-columns:1fr}}
+</style>
+
+<section class="st-hero">
+  <figure><img src="images/work/studio-vortex-bw.jpg" alt="Alexandre Partouche seated in the studio in front of a large vortex painting" fetchpriority="high"></figure>
+</section>
+
+<div class="st">
+  <section class="st-row">
+    <div><span class="mono">The studio</span><h2>What we do</h2></div>
     <div>
-      <div class="mono">Studio</div>
-      <h1>Alexandre Partouche. <i>Los Angeles.</i></h1>
-      <p class="lede">Painter, with a formal creative background and a working method built for interiors: compose for the room first, then paint at the scale the room demands.</p>
+      <p>The Polycrafted makes art for specific interiors. Large-scale paintings, diamond dust on canvas, murals painted on site, sculpture, one-off furniture and objects. Every piece is designed with the room it will live in, not placed in it afterwards, and every piece is made once.</p>
+      <p>The studio is led by Alexandre Partouche, painter, working from Los Angeles for residences and projects across Southern California and beyond.</p>
     </div>
-    <div><img src="images/work/studio-vortex-bw.jpg" alt="Alexandre Partouche seated in the studio in front of a large vortex painting" style="width:100%;aspect-ratio:4/5;object-fit:cover"></div>
-  </div>
-</section>
+  </section>
 
-<section class="section wrap">
-  <div class="grid-2">
-    <div><div class="mono eyebrow">The work</div><h2>Large-scale paintings made for specific interiors.</h2></div>
-    <div class="prose">
-      <p>The Polycrafted makes paintings, murals, sculpture and custom objects for rooms that already exist. Every piece starts with a photograph of the wall and ends installed on it. Between the two sits the studio's method: a photoreal render of the proposed work in the client's own space, approved before the first brushstroke, then executed by hand.</p>
-      <p>The studio's work has been created for John Legend's former residence in collaboration with Premier Stagers, for The Harrison SF in San Francisco, and for projects with Max Jacquet Design, alongside private residences across Los Angeles, Beverly Hills and Newport Beach.</p>
+  <section class="st-row">
+    <div><span class="mono">How we work</span><h2>From the room to the wall</h2></div>
+    <div class="st-steps">
+      <div><div><b>A conversation about the space</b><p>Plans or photos, the palette, the light, the client. Alexandre advises on scale, placement, medium and composition.</p></div></div>
+      <div><div><b>A proposal you can see</b><p>The concept, a photoreal render of the piece in the actual room at true scale, and a fixed price with lead time. Revised until it is right, before anything is committed.</p></div></div>
+      <div><div><b>Made by hand</b><p>The piece is painted, built or sculpted in the Los Angeles studio. Original composition, archival materials, diamond dust finish where it belongs.</p></div></div>
+      <div><div><b>Delivered and installed</b><p>Crated, delivered and hung by the studio. The room is left as it was found, with the piece on the wall.</p></div></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section wrap rule">
-  <div class="grid-2">
-    <div><div class="mono eyebrow">Materials</div><h2>Diamond dust, and why it photographs the way it does.</h2></div>
-    <div class="prose">
-      <p>Diamond dust is finely crushed glass applied by hand over the painted surface as a final layer. It catches light from every angle and changes as you move through the room, which is why it reads so well on dark grounds and in rooms with directional lighting. It is the studio's signature finish and adds 20 percent to any size.</p>
-      <p>Underneath: archival canvas, professional acrylics and oils, sealed with UV-resistant varnish so the piece holds its colour under years of Southern California light.</p>
+  <section class="st-row">
+    <div><span class="mono">Who we work with</span><h2>People who shape rooms</h2></div>
+    <div>
+      <p>The studio works alongside the people responsible for an interior, and takes on a limited number of projects each year.</p>
+      <div class="st-list">
+        <div>Interior designers</div><div>Architects</div>
+        <div>Staging companies</div><div>Hotels and hospitality</div>
+        <div>Music and production</div><div>Private residences</div>
+        <div>Developers and commercial</div><div>Collectors</div>
+      </div>
+      <p style="margin-top:28px">Work by the studio has been created for John Legend's former residence in collaboration with Premier Stagers, for The Harrison SF, and for projects with Max Jacquet Design, alongside private residences across Los Angeles, Beverly Hills and Newport Beach.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section wrap rule">
-  <div class="grid-2">
-    <div><div class="mono eyebrow">Originality</div><h2>Original compositions. Always.</h2></div>
-    <div class="prose">
-      <p>The studio works in its own language. Style, palette, gesture, texture, scale and material are all open to direction. What the studio does not do is reproduce or reinterpret the compositions of named artists, or paint identifiable celebrity likenesses. Every commission is warranted as an original work, in writing, which protects the client and the designer who specified it.</p>
+  <section class="st-row">
+    <div><span class="mono">What to expect</span><h2>Original. Warranted. On time.</h2></div>
+    <div>
+      <p>Every commission is an original composition, warranted as such in writing. The studio does not reproduce or reinterpret the work of named artists and does not paint celebrity likenesses. Style, palette, gesture, texture, scale and material are all open to direction.</p>
+      <p>You see the piece in your room before it exists. You receive a fixed price and a lead time before you commit. Diamond dust, the studio's signature finish, catches light from every angle and changes as you move through the room.</p>
     </div>
-  </div>
-</section>
-
-<div class="big">
-  <img src="images/work/black-hearts-jl.jpg" alt="Black hearts with diamond dust, 6 by 8 feet, beside two white armchairs" loading="lazy">
-  <div class="tag">Untitled (black hearts) &middot; 72 x 96 in &middot; John Legend's former residence, with Premier Stagers</div>
+  </section>
 </div>
 
-<section class="section wrap">
-  <div class="grid-2">
-    <div><div class="mono eyebrow">Work with the studio</div><h2>One photo of the wall to start.</h2></div>
-    <div style="align-self:end"><div class="btn-row"><a class="btn" href="commission.html">Start a commission</a><a class="btn ghost" href="for-designers.html">Trade program</a></div></div>
-  </div>
+<section class="st-close">
+  <h2>Start with the room.</h2>
+  <div class="btn-row"><a class="btn" href="contact.html">Contact the studio</a><a class="btn ghost" href="work.html">See the work</a></div>
 </section>
