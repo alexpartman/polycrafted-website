@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Polycrafted | Rare things, made by hand. Los Angeles</title>
-<meta name="description" content="Large-scale paintings, murals, sculpture, furniture and objects, each made for one room. Seen in that room before it exists, then made by hand in Los Angeles.">
+<title>The Polycrafted | Where Vision Takes Form. Los Angeles</title>
+<meta name="description" content="Large-scale paintings, murals, sculpture, furniture and objects, each made for one room. Seen in that room before it exists, then made by hand in Los Angeles. By invitation.">
 <link rel="canonical" href="https://thepolycrafted.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Polycrafted | Rare things, made by hand. Los Angeles">
-<meta property="og:description" content="Large-scale paintings, murals, sculpture, furniture and objects, each made for one room. Seen in that room before it exists, then made by hand in Los Angeles.">
+<meta property="og:title" content="The Polycrafted | Where Vision Takes Form. Los Angeles">
+<meta property="og:description" content="Large-scale paintings, murals, sculpture, furniture and objects, each made for one room. Seen in that room before it exists, then made by hand in Los Angeles. By invitation.">
 <meta property="og:url" content="https://thepolycrafted.com/">
 <meta property="og:image" content="https://thepolycrafted.com/images/site/og-home.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,132 +30,60 @@
   </div>
 </nav>
 <style>
-/* Image-led home, v2 */
-.nav{background:transparent;border-bottom:0;position:fixed;left:0;right:0}
-.v2-hero{position:relative;height:100vh;min-height:640px;overflow:hidden;background:#000}
-.v2-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:v2fade 18s infinite;transform:scale(1.04)}
-.v2-hero img:nth-child(2){animation-delay:6s}.v2-hero img:nth-child(3){animation-delay:12s}
-@keyframes v2fade{0%{opacity:0}6%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
-.v2-hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 35%,rgba(0,0,0,.55) 100%)}
-.v2-hero .word{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff}
-.v2-hero .word h1{font-weight:500;font-size:clamp(28px,3.4vw,44px);letter-spacing:.42em;text-transform:uppercase;margin-left:.42em}
-.v2-hero .word p{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,32px);color:rgba(255,255,255,.85);max-width:none}
-.v2-hero .foot{position:absolute;left:var(--gutter);right:var(--gutter);bottom:32px;display:flex;justify-content:space-between;align-items:flex-end;color:#fff}
-.v2-hero .foot .mono{color:rgba(255,255,255,.7)}
-.v2-state{padding:clamp(96px,14vw,200px) var(--gutter);text-align:center}
-.v2-state h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8vw,120px);line-height:.95;letter-spacing:-.02em;max-width:none}
-.v2-state h2 i{font-style:italic}
-.v2-state p{margin:36px auto 0;max-width:640px;font-size:clamp(17px,1.5vw,21px);line-height:1.6}
-.v2-piece{position:relative;height:100vh;min-height:600px;overflow:hidden;border-top:1px solid var(--line)}
-.v2-piece img{width:100%;height:100%;object-fit:cover}
-.v2-piece figcaption{position:absolute;left:var(--gutter);bottom:36px;color:#fff;text-shadow:0 1px 20px rgba(0,0,0,.6)}
-.v2-piece figcaption b{display:block;font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(24px,2.6vw,36px);margin-bottom:6px}
-.v2-piece figcaption span{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-.v2-piece.contain{background:#0a0a0b}
-.v2-piece.contain img{object-fit:contain;padding:6vh 0}
-.v2-range{padding:clamp(80px,10vw,160px) var(--gutter);border-top:1px solid var(--line)}
-.v2-range .mono{margin-bottom:40px}
-.v2-range ol{list-style:none;counter-reset:r}
-.v2-range li{border-top:1px solid var(--line);padding:22px 0;display:grid;grid-template-columns:70px 1fr auto;align-items:baseline;gap:24px}
-.v2-range li:last-child{border-bottom:1px solid var(--line)}
-.v2-range li::before{counter-increment:r;content:"0" counter(r);font-family:var(--mono);font-size:12px;color:var(--accent)}
-.v2-range li b{font-weight:500;font-size:clamp(34px,6vw,88px);line-height:1;letter-spacing:-.03em}
-.v2-range li span{font-family:var(--mono);font-size:12px;color:var(--ink-2);letter-spacing:.05em;text-transform:uppercase;text-align:right}
-@media(max-width:700px){.v2-range li{grid-template-columns:50px 1fr}.v2-range li span{grid-column:2;text-align:left}}
-.v2-proc{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
-.v2-proc figure{position:relative;aspect-ratio:4/5;overflow:hidden;margin:0}
-.v2-proc figure img{width:100%;height:100%;object-fit:cover}
-.v2-proc figcaption{position:absolute;top:24px;left:24px}
-.v2-proc .txt{padding:clamp(48px,6vw,96px) var(--gutter);display:flex;flex-direction:column;justify-content:center}
-.v2-proc .txt h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.5vw,64px);line-height:1;letter-spacing:-.01em}
-.v2-proc .txt p{margin-top:24px;font-size:18px;line-height:1.6;max-width:44ch}
-@media(max-width:820px){.v2-proc{grid-template-columns:1fr}}
-.v2-close{padding:clamp(120px,16vw,220px) var(--gutter);text-align:center;border-top:1px solid var(--line)}
-.v2-close h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.5vw,96px);line-height:1;letter-spacing:-.02em;max-width:none}
-.v2-close .btn-row{justify-content:center}
-.v2-who{padding:clamp(72px,9vw,140px) var(--gutter);border-top:1px solid var(--line);background:var(--panel-2)}
-.v2-who .mono{margin-bottom:36px}
-.v2-who ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 var(--gutter)}
-.v2-who li{border-top:1px solid var(--line);padding:22px 0;font-family:var(--serif);font-size:clamp(24px,2.6vw,36px);line-height:1.1}
-.v2-who li small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:8px}
-@media(max-width:820px){.v2-who ul{grid-template-columns:1fr}}
+/* Home v3: gallery frame, light plaster palette (from Alex's reference layout) */
+html,body{background:#EFECE6;color:#1A1917;color-scheme:light}
+:root{--sans:'Inter',Helvetica,Arial,sans-serif}
+body,.nav,.nav ul,.g-bar{font-family:var(--sans)}
+body{height:100vh;height:100dvh;overflow:hidden}
+footer{display:none}
+.nav{position:fixed;left:0;right:0;top:0;background:transparent;border:0;backdrop-filter:none;z-index:50}
+.nav .wrap{height:64px}
+.nav .brand{color:#1A1917;font-family:var(--sans);font-size:18px;letter-spacing:.02em;font-weight:700;text-transform:uppercase}
+.nav ul{color:#1A1917;gap:32px;font-size:12px;letter-spacing:.14em;font-weight:600}
+.nav ul a{border:0;color:#1A1917;opacity:.85}.nav ul a:hover,.nav ul a[aria-current=page]{color:#1A1917;opacity:1;border:0}
+.nav .right .btn{display:none}
+.nav-toggle{color:#1A1917;font-family:var(--sans);font-weight:600;letter-spacing:.14em}
+@media(max-width:820px){.nav ul{background:#EFECE6;border-top:1px solid #D8D4CC}.nav ul a{border-bottom:1px solid #D8D4CC}}
+.g-frame{position:absolute;left:24px;right:24px;top:64px;bottom:52px;overflow:hidden;background:#DAD6CE;cursor:e-resize}
+@media(max-width:820px){.g-frame{left:16px;right:16px;bottom:64px}}
+.g-frame figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.1s ease}
+.g-frame figure.on{opacity:1}
+.g-frame img{width:100%;height:100%;object-fit:cover}
+.g-frame figure.contain{background:#E4E1DA}
+.g-frame figure.contain img{object-fit:contain;padding:4vh 4vw}
+.g-bar{position:absolute;left:24px;right:24px;bottom:0;height:52px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#1A1917}
+.g-bar .l{display:flex;gap:48px}
+.g-bar .r{display:flex;gap:40px;align-items:center}
+.g-bar a{border-bottom:1px solid rgba(26,25,23,.5)}
+.g-bar .cap{opacity:.6;font-weight:500}
+@media(max-width:820px){.g-bar{left:16px;right:16px;height:64px;flex-wrap:wrap;font-size:10px;letter-spacing:.12em;align-content:center;row-gap:6px}.g-bar .l{gap:20px}.g-bar .tl{display:none}.g-bar .r{gap:20px}}
 </style>
 
-<header class="v2-hero">
-  <img src="images/work/constellation-hallway.jpg" alt="">
-  <img src="images/work/lion-newport.jpg" alt="">
-  <img src="images/work/revenge.jpg" alt="">
-  <div class="veil"></div>
-  <div class="word">
-    <h1>The Polycrafted</h1>
-    <p>Rare things, made by hand, for one room.</p>
-  </div>
-  <div class="foot">
-    <span class="mono">Los Angeles &middot; <a href="private.html" style="color:#fff">By invitation</a></span>
-    <span class="mono">Paintings &middot; Murals &middot; Sculpture &middot; Furniture &middot; Objects</span>
-  </div>
-</header>
+<div class="g-frame" id="g-frame" aria-label="Selected work">
+  <figure class="on"><img src="images/work/lion-newport.jpg" alt="Diamond dust lion above a white sofa, Newport Beach" fetchpriority="high" style="object-position:center 20%"><figcaption hidden>Lion, diamond dust / Newport Beach</figcaption></figure>
+  <figure><img src="images/work/constellation-hallway.jpg" alt="Black constellation painting in an entry hall" loading="lazy"><figcaption hidden>Constellation / Entry hall, private residence</figcaption></figure>
+  <figure><img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" loading="lazy" style="object-position:12% center"><figcaption hidden>Revenge / Private residence, Los Angeles</figcaption></figure>
+  <figure><img src="images/work/grey-abstract-render.jpg" alt="Render of a proposed painting in a client's room" loading="lazy"><figcaption hidden>Render, before anything is made / Client's living room</figcaption></figure>
+  <figure class="contain"><img src="images/work/black-hearts-jl.jpg" alt="Black hearts with diamond dust, 6 by 8 feet" loading="lazy"><figcaption hidden>Black hearts, diamond dust / John Legend's former residence, with Premier Stagers</figcaption></figure>
+  <figure><img src="images/work/studio-vortex-bw.jpg" alt="The artist in the studio in front of a large vortex painting" loading="lazy"><figcaption hidden>Vortex / The studio, Los Angeles</figcaption></figure>
+</div>
 
-<section class="v2-state">
-  <h2>Art designed <i>with</i> the interior.<br>Not placed in it.</h2>
-  <p>One artist, one studio, any medium. We work alongside the people who shape rooms: the piece is composed for the space, its light, its palette and its scale, shown in that room before it exists, then made by hand in Los Angeles. Nothing is repeated. Nothing is stocked.</p>
-</section>
+<div class="g-bar">
+  <div class="l"><span class="tl">Where vision takes form.</span><span class="cap" id="g-cap">Lion, diamond dust / Newport Beach</span></div>
+  <div class="r"><a href="private.html">By invitation</a><span id="g-n">01 / 06</span></div>
+</div>
 
-<section class="v2-who">
-  <div class="mono">A service, for the people who shape rooms</div>
-  <ul>
-    <li>Interior designers<small>Trade net pricing, renders for client sign-off</small></li>
-    <li>Staging companies<small>Statement pieces that sell the house</small></li>
-    <li>Hotels and hospitality<small>Lobbies, suites, restaurants, at scale</small></li>
-    <li>Music and production<small>Studios, control rooms, sets</small></li>
-    <li>Private residences<small>Collectors and homeowners, one room at a time</small></li>
-    <li>Offices and commercial<small>Reception, boardroom, brand spaces</small></li>
-  </ul>
-</section>
-
-<figure class="v2-piece">
-  <img src="images/work/lion-newport.jpg" alt="Diamond dust lion above a white sofa, Newport Beach">
-  <figcaption><b>Lion, sand colour</b><span>Diamond dust on canvas &middot; 38 x 50 in &middot; Newport Beach</span></figcaption>
-</figure>
-<figure class="v2-piece">
-  <img src="images/work/constellation-hallway.jpg" alt="Black constellation painting in an entry hall">
-  <figcaption><b>Untitled (constellation)</b><span>Large-scale painting &middot; Entry hall, private residence</span></figcaption>
-</figure>
-<figure class="v2-piece contain">
-  <img src="images/work/black-hearts-jl.jpg" alt="Black hearts with diamond dust, 6 by 8 feet">
-  <figcaption><b>Untitled (black hearts)</b><span>Diamond dust on canvas &middot; 72 x 96 in &middot; John Legend's former residence, with Premier Stagers</span></figcaption>
-</figure>
-<figure class="v2-piece">
-  <img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" style="object-position:12% center">
-  <figcaption><b>Revenge</b><span>Text painting on canvas &middot; Private residence, Los Angeles</span></figcaption>
-</figure>
-
-<section class="v2-range">
-  <div class="mono">One studio. Every medium.</div>
-  <ol>
-    <li><b>Painting</b><span>Canvas, diamond dust, any scale</span></li>
-    <li><b>Mural</b><span>Painted on site, 8 ft and up</span></li>
-    <li><b>Sculpture</b><span>Wall and freestanding</span></li>
-    <li><b>Furniture</b><span>One-off pieces, painted or built</span></li>
-    <li><b>Objects</b><span>Painted heavy bags and anything with a surface</span></li>
-  </ol>
-</section>
-
-<section class="v2-proc">
-  <figure><img src="images/work/grey-abstract-render.jpg" alt="Render of a proposed painting in a client's room"><figcaption class="tag">Render, before anything is made</figcaption></figure>
-  <div class="txt">
-    <h2>You see it in your room first.</h2>
-    <p>Send one photo of the wall. Within 24 hours you have a photoreal render of the piece in that exact space, at true scale. Approve it, and only then does the work begin.</p>
-    <div class="btn-row"><a class="btn" href="commission.html">Start with a photo</a><a class="btn ghost" href="for-designers.html">For designers</a></div>
-  </div>
-</section>
-
-<section class="v2-close">
-  <div class="mono" style="margin-bottom:28px">Limited availability &middot; The studio chooses its projects</div>
-  <h2>Made once. <i>For a few.</i></h2>
-  <p style="margin:28px auto 0;max-width:560px;font-size:18px;line-height:1.6">Invited designers and studios receive a personal access code. If you have one, enter it. If not, request an introduction.</p>
-  <div class="btn-row"><a class="btn" href="private.html">Private access</a><a class="btn ghost" href="work.html">See the work</a></div>
-</section>
+<script>
+(function(){
+  var fr=document.getElementById('g-frame'),fs=fr.querySelectorAll('figure'),cap=document.getElementById('g-cap'),n=document.getElementById('g-n'),i=0,t;
+  function pad(x){return (x<10?'0':'')+x}
+  function go(k){fs[i].classList.remove('on');i=(k+fs.length)%fs.length;fs[i].classList.add('on');cap.textContent=fs[i].querySelector('figcaption').textContent;n.textContent=pad(i+1)+' / '+pad(fs.length);}
+  function auto(){clearInterval(t);t=setInterval(function(){go(i+1)},7000)}
+  fr.addEventListener('click',function(){go(i+1);auto()});
+  document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){go(i+1);auto()}if(e.key==='ArrowLeft'){go(i-1);auto()}});
+  auto();
+})();
+</script>
 
 <footer>
   <div class="wrap">
