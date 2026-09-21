@@ -28,16 +28,20 @@ footer{display:none}
 .g-bar .r{display:flex;gap:40px;align-items:center}
 .g-bar a{border-bottom:1px solid rgba(26,25,23,.5)}
 .g-bar .cap{opacity:.6;font-weight:500}
+.g-cta{position:absolute;right:28px;bottom:28px;z-index:2;background:#1A1917;color:#EFECE6;padding:15px 22px;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border:1px solid #1A1917;transition:background .2s,color .2s}
+.g-cta:hover{background:#EFECE6;color:#1A1917}
+@media(max-width:820px){.g-cta{right:16px;bottom:16px;padding:13px 18px}}
 @media(max-width:820px){.g-bar{left:16px;right:16px;height:64px;flex-wrap:wrap;font-size:10px;letter-spacing:.12em;align-content:center;row-gap:6px}.g-bar .l{gap:20px}.g-bar .tl{display:none}.g-bar .r{gap:20px}}
 </style>
 
 <div class="g-frame" id="g-frame" aria-label="Selected work">
   <figure class="on"><img src="images/work/hero-horses.jpg" alt="Large ink painting of horses and riders on raw canvas in a plaster-walled studio" fetchpriority="high"><figcaption hidden>Studio render / Large-scale work in the space</figcaption></figure>
+  <a class="g-cta" href="private.html">By invitation &rarr;</a>
 </div>
 
 <div class="g-bar">
   <div class="l"><span class="tl">Where vision takes form.</span><span class="cap" id="g-cap">Studio render / Large-scale work in the space</span></div>
-  <div class="r"><a href="private.html">By invitation</a><span id="g-n">Los Angeles</span></div>
+  <div class="r"><a href="work.html">Selected work</a><span id="g-n">Los Angeles</span></div>
 </div>
 
 <script>

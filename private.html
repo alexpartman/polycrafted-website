@@ -32,23 +32,22 @@
 </nav>
 <style>
 .nav{background:transparent;border-bottom:0;position:fixed;left:0;right:0}
-.pv-gate{position:relative;min-height:100vh;display:grid;place-items:center;padding:140px var(--gutter) 100px;overflow:hidden;background:#000}
-.pv-gate .bg{position:absolute;inset:0;background:url(images/work/studio-vortex-bw.jpg) center/cover;opacity:.28;transform:scale(1.04)}
-.pv-gate .veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.2),rgba(0,0,0,.85) 75%)}
-.pv-gate .box{position:relative;text-align:center;max-width:560px;color:#fff}
-.pv-gate .mono{color:rgba(255,255,255,.65);margin-bottom:28px}
-.pv-gate h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,84px);line-height:1;letter-spacing:-.02em;max-width:none}
-.pv-gate h1 i{font-style:italic}
-.pv-gate p.lede{margin:28px auto 0;max-width:46ch;color:rgba(255,255,255,.8);font-size:17px;line-height:1.6}
+.pv-gate{position:relative;min-height:100vh;display:grid;place-items:center;padding:140px var(--gutter) 100px;overflow:hidden;background:var(--bg)}
+.pv-gate .bg{position:absolute;inset:0;background:url(images/work/studio-vortex-bw.jpg) center/cover;opacity:.10;filter:grayscale(1);transform:scale(1.04)}
+.pv-gate .veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(239,236,230,.2),rgba(239,236,230,.92) 75%)}
+.pv-gate .box{position:relative;text-align:center;max-width:600px;color:var(--ink)}
+.pv-gate .mono{color:var(--ink-2);margin-bottom:28px}
+.pv-gate h1{font-size:clamp(40px,6vw,84px);line-height:1;max-width:none}
+.pv-gate p.lede{margin:28px auto 0;max-width:46ch;font-size:17px;line-height:1.6}
 .pv-code{margin:48px auto 0;max-width:420px}
-.pv-code .in{display:flex;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35)}
-.pv-code input{flex:1;background:transparent;border:0;color:#fff;font-family:var(--mono);font-size:16px;letter-spacing:.22em;text-transform:uppercase;padding:18px 20px;outline:0;min-width:0}
-.pv-code input::placeholder{color:rgba(255,255,255,.35);letter-spacing:.12em}
-.pv-code button{background:#fff;color:#000;border:0;padding:0 26px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
-.pv-code button:hover{background:var(--accent);color:#fff}
-.pv-code .msg{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--accent);min-height:16px}
-.pv-gate .foot{margin-top:56px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.55)}
-.pv-gate .foot a{color:#fff}
+.pv-code .in{display:flex;border:1px solid var(--ink);background:#fff}
+.pv-code input{flex:1;background:transparent;border:0;color:var(--ink);font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:18px 20px;outline:0;min-width:0}
+.pv-code input::placeholder{color:var(--ink-3);letter-spacing:.12em;font-weight:500}
+.pv-code button{background:var(--ink);color:var(--bg);border:0;padding:0 26px;font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.pv-code button:hover{background:#3A3835}
+.pv-code .msg{margin-top:14px;font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.1em;color:#B3261E;min-height:16px}
+.pv-gate .foot{margin-top:56px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;color:var(--ink-2)}
+.pv-gate .foot a{color:var(--ink);border-bottom:1px solid var(--ink)}
 .pv-req{padding:clamp(80px,10vw,140px) var(--gutter);border-top:1px solid var(--line)}
 .pv-req .grid-2{max-width:1240px;margin:0 auto}
 </style>
@@ -58,7 +57,7 @@
   <div class="veil" aria-hidden="true"></div>
   <div class="box">
     <div class="mono">Private access &middot; By invitation</div>
-    <h1>The studio works with <i>a few.</i></h1>
+    <h1>The studio works with a few.</h1>
     <p class="lede">The Polycrafted takes on a limited number of projects each year, with designers, architects and studios it chooses to work with. If you have received an access code, enter it below to open your private session.</p>
     <form class="pv-code" id="pv-form" autocomplete="off">
       <div class="in">
@@ -109,7 +108,7 @@
     var code=i.value.trim().toUpperCase().replace(/[\s-]/g,'');
     if(!code) return;
     sha('polycrafted:'+code).then(function(h){
-      if(HASHES.indexOf(h)>-1){ try{sessionStorage.setItem('pv-key',code)}catch(x){} m.style.color='#fff'; m.textContent='Welcome.'; setTimeout(function(){location.href='session.html'},500); }
+      if(HASHES.indexOf(h)>-1){ try{sessionStorage.setItem('pv-key',code)}catch(x){} m.style.color='var(--ink)'; m.textContent='Welcome.'; setTimeout(function(){location.href='session.html'},500); }
       else { m.style.color=''; m.textContent='That code is not recognised.'; i.select(); }
     });
   });

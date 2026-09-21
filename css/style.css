@@ -7,6 +7,7 @@
 @font-face{font-family:'IBM Plex Mono';font-weight:400;font-display:swap;src:url('../fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'IBM Plex Mono';font-weight:500;font-display:swap;src:url('../fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Instrument Serif';font-weight:400;font-style:normal;font-display:swap;src:url('../fonts/instrument-serif-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-weight:400;font-display:swap;src:url('../fonts/inter-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-weight:500;font-display:swap;src:url('../fonts/inter-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-weight:600;font-display:swap;src:url('../fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-weight:700;font-display:swap;src:url('../fonts/inter-latin-700-normal.woff2') format('woff2')}
@@ -215,3 +216,38 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ===== Light theme, Inter (Sep 2026) ===== */
+:root{
+  --bg:#EFECE6; --panel:#E6E2DA; --panel-2:#F6F4EF;
+  --ink:#1A1917; --ink-2:#5E5B56; --ink-3:#8E8B84; --line:#D9D5CD;
+  --accent:#1A1917;
+  --display:'Inter',Helvetica,Arial,sans-serif;
+  --mono:'Inter',Helvetica,Arial,sans-serif;
+  --serif:'Inter',Helvetica,Arial,sans-serif;
+}
+html{color-scheme:light}
+::selection{background:var(--ink);color:var(--bg)}
+.mono,.nav ul,.nav-toggle,.ticker span,.note,.field label,.form-status,.form-note,.field .hint,.tag,.table th,.index-row .n,.index-row .s,.work-card .cap span,.steps li::before{font-weight:600;letter-spacing:.14em}
+.mono{font-size:11px}
+.table{font-family:var(--display);font-size:14px}
+.table th{font-size:11px}
+h1,.h1{font-weight:700;letter-spacing:-.035em}
+h2,.h2{font-weight:600;letter-spacing:-.03em}
+h3,.h3{font-weight:600}
+h1 i,h2 i,.serif-i{font-family:var(--display);font-style:normal;font-weight:500;color:var(--ink-2);letter-spacing:inherit}
+.lede{color:var(--ink-2)}
+.nav{background:rgba(239,236,230,.92);border-bottom:1px solid var(--line)}
+.nav .brand{font-size:18px;letter-spacing:.02em;font-weight:700}
+.nav ul{color:var(--ink);font-size:12px}
+.nav ul a{opacity:.8;border-bottom:0}
+.nav ul a:hover,.nav ul a[aria-current=page]{opacity:1;border-bottom:0}
+.btn{font-weight:600;letter-spacing:.14em;font-size:11px}
+.tag{background:rgba(239,236,230,.92);color:var(--ink);font-size:11px}
+.ticker span::before{background:var(--ink)}
+.index-row:hover{background:var(--panel-2)}
+.panel{background:var(--panel-2);border-color:var(--line)}
+.panel-dark{background:var(--panel)}
+.field input,.field select,.field textarea{background:#fff}
+.form-status.err{color:#B3261E}
+footer .brand{letter-spacing:.02em;font-size:16px;font-weight:700}
