@@ -33,7 +33,7 @@
 .wk-head p{margin-top:16px;max-width:52ch}
 .wk{padding:0 24px 24px}
 .wk figure{position:relative;margin:0 0 24px;height:calc(100vh - 88px);min-height:520px;overflow:hidden;background:#DAD6CE}
-.wk figure img{width:100%;height:100%;object-fit:cover}
+.wk figure img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center)}
 .wk figure.contain{background:#E6E2DA}
 .wk figure.contain img{object-fit:contain;padding:5vh 5vw}
 .wk figcaption{display:flex;justify-content:space-between;gap:24px;margin-top:-8px;padding:14px 0 0;font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
@@ -52,29 +52,61 @@
 </section>
 
 <section class="wk">
+  <div class="item" id="skull">
+    <figure><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"></figure>
+    <figcaption>Skull <span>Painting on canvas &middot; 84 x 84 in &middot; Premier Stagers with Max Jacquet Design</span></figcaption>
+  </div>
+  <div class="item" id="swirl">
+    <figure><img src="images/work/swirl-console.jpg" alt="Large black and grey gestural abstract painting above a stone console between two orange armchairs" loading="lazy"></figure>
+    <figcaption>Untitled (grey) <span>Large-scale painting &middot; Private residence</span></figcaption>
+  </div>
+  <div class="item" id="hearts-graffiti">
+    <figure><img src="images/work/hearts-graffiti.jpg" alt="Pink, orange and black spray painting of layered heart forms on a grey plaster wall under two spotlights" loading="lazy"></figure>
+    <figcaption>Hearts, pink <span>Spray and enamel on canvas &middot; Private residence</span></figcaption>
+  </div>
+  <div class="item" id="swirl-sofa">
+    <figure><img src="images/work/swirl-sofa.jpg" alt="Black and white gestural abstract painting above a beige sofa with rust cushions" loading="lazy"></figure>
+    <figcaption>Untitled (black and white) <span>Large-scale painting &middot; Private residence</span></figcaption>
+  </div>
+  <div class="item" id="swirl-detail">
+    <figure><img src="images/work/swirl-detail.jpg" alt="Close detail of layered grey and white brush strokes on a black ground" loading="lazy"></figure>
+    <figcaption>Untitled (black and white), detail <span>Brush and knife, archival acrylic</span></figcaption>
+  </div>
   <div class="item" id="lion">
-    <figure><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa in a Newport Beach living room" style="object-position:center 20%"></figure>
+    <figure style="--pos:center 20%"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa in a Newport Beach living room" loading="lazy"></figure>
     <figcaption>Lion, sand colour <span>Diamond dust on canvas &middot; 38 x 50 in &middot; Private residence, Newport Beach</span></figcaption>
+  </div>
+  <div class="item" id="black-heart">
+    <figure><img src="images/work/black-heart-kitchen.jpg" alt="Large black heart with gold drips on a white wall beside a dining table with a view of the city" loading="lazy"></figure>
+    <figcaption>Black heart <span>Shaped canvas, black and gold &middot; Private residence, San Francisco</span></figcaption>
+  </div>
+  <div class="item" id="black-heart-table">
+    <figure><img src="images/work/black-heart-table.jpg" alt="Black heart with gold drips behind a table of candy jars under a sculptural chandelier" loading="lazy"></figure>
+    <figcaption>Black heart <span>Shaped canvas, black and gold &middot; Private residence, San Francisco</span></figcaption>
+  </div>
+  <div class="item" id="couple">
+    <figure><img src="images/work/couple-red.jpg" alt="Painting of a seated couple in black, pink and red between two leather chairs" loading="lazy"></figure>
+    <figcaption>Two, in red <span>Painting on canvas &middot; Private residence</span></figcaption>
+  </div>
+  <div class="item" id="couple-flowers">
+    <figure><img src="images/work/couple-flowers.jpg" alt="Painting of a couple among flowers on a pink ground" loading="lazy"></figure>
+    <figcaption>Garden, in pink <span>Painting on canvas</span></figcaption>
+  </div>
+  <div class="item" id="riders">
+    <figure><img src="images/work/riders-red.jpg" alt="Painting of two riders on a black horse against a red landscape" loading="lazy"></figure>
+    <figcaption>Riders <span>Painting on canvas</span></figcaption>
   </div>
   <div class="item" id="constellation">
     <figure><img src="images/work/constellation-hallway.jpg" alt="Large black painting of concentric heart forms above a black console in a white entry hall" loading="lazy"></figure>
     <figcaption>Constellation <span>Large-scale painting &middot; Entry hall, private residence</span></figcaption>
   </div>
-  <div class="item" id="black-hearts">
-    <figure class="contain"><img src="images/work/black-hearts-jl.jpg" alt="Black hearts with diamond dust, 6 by 8 feet, beside two white armchairs" loading="lazy"></figure>
-    <figcaption>Black hearts <span>Diamond dust on canvas &middot; 72 x 96 in &middot; John Legend's former residence, with Premier Stagers</span></figcaption>
-  </div>
   <div class="item" id="revenge">
-    <figure><img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" loading="lazy" style="object-position:12% center"></figure>
+    <figure><img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" loading="lazy"></figure>
     <figcaption>Revenge <span>Text painting on canvas &middot; Private residence, Los Angeles</span></figcaption>
   </div>
   <div class="item" id="vortex">
     <figure><img src="images/work/studio-vortex-bw.jpg" alt="The artist in the studio in front of a large vortex painting" loading="lazy"></figure>
     <figcaption>Vortex <span>Large-scale painting &middot; The studio, Los Angeles</span></figcaption>
-  </div>
-  <div class="item" id="render">
-    <figure><img src="images/work/grey-abstract-render.jpg" alt="Photoreal render of a proposed large abstract painting above a console in a client's living room" loading="lazy"></figure>
-    <figcaption>Proposal render <span>The piece in the client's room, before it is made</span></figcaption>
   </div>
 </section>
 
