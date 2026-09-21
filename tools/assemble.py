@@ -66,7 +66,7 @@ for fn in sorted(os.listdir(SRC)):
     if meta.get('schema'):
         schema = '<script type="application/ld+json">\n' + json.dumps(meta['schema'], indent=1) + '\n</script>\n'
     html = HEAD.format(title=meta['title'], description=meta['description'], slug=fn, canon=('' if fn=='index.html' else fn), og=meta.get('og', 'og-home.jpg'), schema=schema)
-    if fn == 'thank-you.html': html = html.replace('<link rel="canonical"', '<meta name="robots" content="noindex">\n<link rel="canonical"')
+    if fn in ('thank-you.html','session.html','private.html'): html = html.replace('<link rel="canonical"', '<meta name="robots" content="noindex">\n<link rel="canonical"')
     html += NAV + '\n' + body.strip() + '\n\n' + FOOTER + '\n</body>\n</html>\n'
     assert '—' not in html, fn + ' contains an em dash'
     open(os.path.join(ROOT, fn), 'w').write(html)

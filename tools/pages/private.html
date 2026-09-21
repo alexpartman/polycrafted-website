@@ -1,0 +1,88 @@
+---
+{"title":"Private Access | The Polycrafted, Los Angeles","description":"The Polycrafted works with a small number of interior designers, architects and studios by invitation. Enter your access code to open a private session with the studio.","og":"og-home.jpg"}
+---
+<style>
+.nav{background:transparent;border-bottom:0;position:fixed;left:0;right:0}
+.pv-gate{position:relative;min-height:100vh;display:grid;place-items:center;padding:140px var(--gutter) 100px;overflow:hidden;background:#000}
+.pv-gate .bg{position:absolute;inset:0;background:url(images/work/studio-vortex-bw.jpg) center/cover;opacity:.28;transform:scale(1.04)}
+.pv-gate .veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.2),rgba(0,0,0,.85) 75%)}
+.pv-gate .box{position:relative;text-align:center;max-width:560px;color:#fff}
+.pv-gate .mono{color:rgba(255,255,255,.65);margin-bottom:28px}
+.pv-gate h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,84px);line-height:1;letter-spacing:-.02em;max-width:none}
+.pv-gate h1 i{font-style:italic}
+.pv-gate p.lede{margin:28px auto 0;max-width:46ch;color:rgba(255,255,255,.8);font-size:17px;line-height:1.6}
+.pv-code{margin:48px auto 0;max-width:420px}
+.pv-code .in{display:flex;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35)}
+.pv-code input{flex:1;background:transparent;border:0;color:#fff;font-family:var(--mono);font-size:16px;letter-spacing:.22em;text-transform:uppercase;padding:18px 20px;outline:0;min-width:0}
+.pv-code input::placeholder{color:rgba(255,255,255,.35);letter-spacing:.12em}
+.pv-code button{background:#fff;color:#000;border:0;padding:0 26px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.pv-code button:hover{background:var(--accent);color:#fff}
+.pv-code .msg{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--accent);min-height:16px}
+.pv-gate .foot{margin-top:56px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.55)}
+.pv-gate .foot a{color:#fff}
+.pv-req{padding:clamp(80px,10vw,140px) var(--gutter);border-top:1px solid var(--line)}
+.pv-req .grid-2{max-width:1240px;margin:0 auto}
+</style>
+
+<section class="pv-gate">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="box">
+    <div class="mono">Private access &middot; By invitation</div>
+    <h1>The studio works with <i>a few.</i></h1>
+    <p class="lede">The Polycrafted takes on a limited number of projects each year, with designers, architects and studios it chooses to work with. If you have received an access code, enter it below to open your private session.</p>
+    <form class="pv-code" id="pv-form" autocomplete="off">
+      <div class="in">
+        <input id="pv-input" name="code" placeholder="Access code" aria-label="Access code" required spellcheck="false">
+        <button type="submit">Enter</button>
+      </div>
+      <div class="msg" id="pv-msg" role="status"></div>
+    </form>
+    <div class="foot">No code? <a href="#request">Request an introduction</a></div>
+  </div>
+</section>
+
+<section class="pv-req" id="request">
+  <div class="grid-2">
+    <div>
+      <div class="mono eyebrow">Without a code</div>
+      <h2>Request an introduction.</h2>
+      <p class="lede" style="margin-top:20px">Access is limited by the studio's availability, and the studio selects the people it works with. Tell us who you are and what you are working on. If it is a fit, you will receive a personal access code.</p>
+    </div>
+    <form class="form panel" name="access-request" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="website" data-success="Received. If it is a fit, your access code will follow by email.">
+      <input type="hidden" name="form-name" value="access-request">
+      <input type="hidden" name="subject" value="Private access request">
+      <div class="row">
+        <div class="field"><label for="ar-name">Name</label><input id="ar-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="ar-firm">Studio or firm</label><input id="ar-firm" name="firm" required autocomplete="organization"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="ar-email">Email</label><input id="ar-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="ar-ig">Instagram or website</label><input id="ar-ig" name="link" placeholder="@ or url"></div>
+      </div>
+      <div class="field"><label for="ar-role">You are</label><select id="ar-role" name="role"><option>Interior designer</option><option>Architect</option><option>Staging company</option><option>Hotel or hospitality</option><option>Music or production</option><option>Developer or commercial</option><option>Private client</option></select></div>
+      <div class="field"><label for="ar-msg">The project</label><textarea id="ar-msg" name="project" required placeholder="Where, what kind of space, and when"></textarea></div>
+      <div class="honey" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit" data-label="Request access">Request access</button>
+      <div class="form-status" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<script>
+(function(){
+  /* Access codes are stored as SHA-256 hashes; the codes themselves never appear in the page. */
+  var HASHES = ["4a2607560fbbb8bbb6a0927019643ef1c8c390d57599b68ed1e50552e2d81f99"];
+  var f=document.getElementById('pv-form'),i=document.getElementById('pv-input'),m=document.getElementById('pv-msg');
+  function sha(s){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')})}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var code=i.value.trim().toUpperCase().replace(/[\s-]/g,'');
+    if(!code) return;
+    sha('polycrafted:'+code).then(function(h){
+      if(HASHES.indexOf(h)>-1){ try{sessionStorage.setItem('pv-key',code)}catch(x){} m.style.color='#fff'; m.textContent='Welcome.'; setTimeout(function(){location.href='session.html'},500); }
+      else { m.style.color=''; m.textContent='That code is not recognised.'; i.select(); }
+    });
+  });
+})();
+</script>
