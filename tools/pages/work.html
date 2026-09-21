@@ -6,8 +6,8 @@
 .wk-head h1{font-size:clamp(36px,5vw,72px);max-width:none}
 .wk-head p{margin-top:16px;max-width:52ch}
 .wk{padding:0 24px 24px}
-.wk figure{position:relative;margin:0 0 24px;height:calc(100vh - 88px);min-height:520px;overflow:hidden;background:#DAD6CE}
-.wk figure img{width:100%;height:100%;object-fit:cover;object-position:var(--pos,center)}
+.wk figure{position:relative;margin:0 0 24px;display:flex;justify-content:center;background:transparent}
+.wk figure img{width:auto;height:auto;max-width:100%;max-height:calc(100vh - 88px)}
 .wk figure.contain{background:#E6E2DA}
 .wk figure.contain img{object-fit:contain;padding:5vh 5vw}
 .wk figcaption{display:flex;justify-content:space-between;gap:24px;margin-top:-8px;padding:14px 0 0;font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
@@ -16,7 +16,7 @@
 .wk-close{padding:clamp(64px,8vw,120px) var(--gutter);text-align:center;border-top:1px solid var(--line)}
 .wk-close h2{max-width:none;font-size:clamp(28px,3.6vw,48px)}
 .wk-close .btn-row{justify-content:center;margin-top:28px}
-@media(max-width:820px){.wk{padding:0 16px 16px}.wk figure{height:70vh;min-height:420px}.wk figcaption{flex-direction:column;gap:4px}}
+@media(max-width:820px){.wk{padding:0 16px 16px}.wk figure img{max-height:80vh}.wk figcaption{flex-direction:column;gap:4px}}
 </style>
 
 <section class="wk-head">
