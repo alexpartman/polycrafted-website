@@ -251,3 +251,7 @@ h1 i,h2 i,.serif-i{font-family:var(--display);font-style:normal;font-weight:500;
 .field input,.field select,.field textarea{background:#fff}
 .form-status.err{color:#B3261E}
 footer .brand{letter-spacing:.02em;font-size:16px;font-weight:700}
+
+/* brand tagline */
+.brand .brand-sub{font-size:.6em;font-weight:500;letter-spacing:.18em;text-transform:uppercase;opacity:.6;margin-left:.6em;vertical-align:baseline;white-space:nowrap}
+@media(max-width:420px){.nav .brand .brand-sub{display:none}}
