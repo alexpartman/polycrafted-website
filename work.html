@@ -34,10 +34,10 @@
 .ed-head .lede{margin-top:24px;max-width:36ch;font-size:16px}
 .ed-head figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:#DAD6CE}
 .ed-head img{width:100%;height:100%;object-fit:cover}
-.sp{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:start;margin-bottom:clamp(64px,9vw,140px)}
+.sp{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:start;margin-bottom:clamp(64px,9vw,140px);padding-bottom:14%}
 .sp figure{margin:0;overflow:hidden;background:#DAD6CE;box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
 .sp figure img{width:100%;height:100%;object-fit:cover;display:block}
-.sp .txt{align-self:center;padding:24px 0}
+.sp .txt{align-self:start;padding:8% 0 0}
 .sp .txt h2{font-size:clamp(24px,2.4vw,34px);line-height:1.1;margin-bottom:14px}
 .sp .txt p{font-size:15px;line-height:1.65;color:var(--ink-2);max-width:40ch}
 .sp .spec{margin-top:22px;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);line-height:2}
@@ -48,16 +48,17 @@
 .sp .main.tall{aspect-ratio:4/5}
 .sp .main.sq{aspect-ratio:1}
 .sp .txt{grid-column:9/13;grid-row:1}
-.sp .det{grid-column:6/10;grid-row:1;margin-top:62%;aspect-ratio:1;z-index:2;outline:12px solid var(--bg)}
+.sp .det{grid-column:6/9;grid-row:1;align-self:end;transform:translateY(45%);aspect-ratio:1;z-index:2;outline:12px solid var(--bg)}
 /* flipped */
 .sp.r .main{grid-column:5/13}
 .sp.r .txt{grid-column:1/5}
-.sp.r .det{grid-column:3/7;margin-top:62%}
+.sp.r .det{grid-column:5/8}
+.sp.nodet{padding-bottom:0}
 .sp.nodet .main{grid-column:1/9}
 .sp.r.nodet .main{grid-column:5/13}
 /* trio */
 .sp .a,.sp .b,.sp .c{aspect-ratio:1}
-.sp .a{grid-column:5/9;grid-row:1}.sp .b{grid-column:9/13;grid-row:1;margin-top:60px}.sp .c{grid-column:7/11;grid-row:1;margin-top:105%;z-index:2;outline:12px solid var(--bg)}
+.sp .a{grid-column:5/9;grid-row:1}.sp .b{grid-column:9/13;grid-row:1;margin-top:60px}.sp .c{grid-column:7/11;grid-row:1;align-self:end;transform:translateY(55%);z-index:2;outline:12px solid var(--bg)}
 .sp.trio .txt{grid-column:1/5}
 .ed-close{padding:clamp(48px,6vw,96px) var(--gutter);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .ed-close h2{max-width:none;font-size:clamp(24px,3vw,40px)}
@@ -65,10 +66,11 @@
   .ed-head{grid-template-columns:1fr}
   .sp{display:block;margin-bottom:64px}
   .sp figure{margin:0 0 16px}
-  .sp .det{margin:-40px 0 0 auto;width:60%;outline-width:8px}
+  .sp{padding-bottom:0}
+  .sp .det{transform:none;margin:-40px 0 0 auto;width:60%;outline-width:8px}
   .sp .txt{padding:8px 0 0}
   .sp .a,.sp .b,.sp .c{width:100%;margin:0 0 16px}
-  .sp .c{margin:0 0 16px;width:100%;outline:0}
+  .sp .c{transform:none;margin:0 0 16px;width:100%;outline:0}
 }
 </style>
 
