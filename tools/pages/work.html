@@ -6,11 +6,11 @@
 .ed-head{display:grid;grid-template-columns:1fr 1.6fr;gap:var(--gutter);align-items:end;margin-bottom:clamp(40px,6vw,96px)}
 .ed-head h1{font-size:clamp(44px,6vw,88px);line-height:.95;max-width:none}
 .ed-head .lede{margin-top:24px;max-width:36ch;font-size:16px}
-.ed-head figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:#DAD6CE}
-.ed-head img{width:100%;height:100%;object-fit:cover}
+.ed-head figure{margin:0}
+.ed-head img{width:100%;height:auto;display:block}
 .sp{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:start;margin-bottom:clamp(64px,9vw,140px);padding-bottom:14%}
-.sp figure{margin:0;overflow:hidden;background:#DAD6CE;box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
-.sp figure img{width:100%;height:100%;object-fit:cover;display:block}
+.sp figure{margin:0;background:transparent;box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
+.sp figure img{width:100%;height:auto;display:block}
 .sp .txt{align-self:start;padding:8% 0 0}
 .sp .txt h2{font-size:clamp(24px,2.4vw,34px);line-height:1.1;margin-bottom:14px}
 .sp .txt p{font-size:15px;line-height:1.65;color:var(--ink-2);max-width:40ch}
@@ -18,11 +18,9 @@
 .sp .num{display:flex;align-items:center;gap:14px;margin-top:14px;font-weight:600;font-size:10px;letter-spacing:.18em;color:var(--ink-2)}
 .sp .num::before{content:"";width:64px;height:1px;background:var(--ink)}
 /* main image */
-.sp .main{grid-column:1/9;grid-row:1;aspect-ratio:16/11}
-.sp .main.tall{aspect-ratio:4/5}
-.sp .main.sq{aspect-ratio:1}
+.sp .main{grid-column:1/9;grid-row:1}
 .sp .txt{grid-column:9/13;grid-row:1}
-.sp .det{grid-column:6/9;grid-row:1;align-self:end;transform:translateY(45%);aspect-ratio:1;z-index:2;outline:12px solid var(--bg)}
+.sp .det{grid-column:6/9;grid-row:1;align-self:end;transform:translateY(45%);z-index:2;outline:12px solid var(--bg)}
 /* flipped */
 .sp.r .main{grid-column:5/13}
 .sp.r .txt{grid-column:1/5}
@@ -31,7 +29,6 @@
 .sp.nodet .main{grid-column:1/9}
 .sp.r.nodet .main{grid-column:5/13}
 /* trio */
-.sp .a,.sp .b,.sp .c{aspect-ratio:1}
 .sp .a{grid-column:5/9;grid-row:1}.sp .b{grid-column:9/13;grid-row:1;margin-top:60px}.sp .c{grid-column:7/11;grid-row:1;align-self:end;transform:translateY(55%);z-index:2;outline:12px solid var(--bg)}
 .sp.trio .txt{grid-column:1/5}
 .ed-close{padding:clamp(48px,6vw,96px) var(--gutter);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
@@ -125,7 +122,7 @@
 
   <div class="sp r" id="words">
     <figure class="main sq"><img src="images/work/words-black-gold.jpg" alt="Black and silver text painting between two black leather armchairs" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/revenge.jpg" alt="Large black and white text painting reading Revenge" loading="lazy" style="object-position:12% center"></figure>
+    <figure class="det"><img src="images/work/revenge.jpg" alt="Large black and white text painting reading Revenge" loading="lazy"></figure>
     <div class="txt">
       <h2>Words</h2>
       <p>Rows of exclamations in a bold, worn sans serif, painted in silver and black over black so the words emerge and recede with the light, chosen to sit with the leather, brass and cowhide in the room. Inset: Revenge, one word broken across three lines in heavy black capitals on a white textured ground, painted large enough to fill a wall.</p>
@@ -148,7 +145,7 @@
 
   <div class="sp" id="skull">
     <figure class="main sq"><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa" loading="lazy" style="object-position:center 30%"></figure>
+    <figure class="det"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa" loading="lazy"></figure>
     <div class="txt">
       <h2>Colour, at Scale</h2>
       <p>A skull inside a burst of orange, pink, blue and green, colour flung outward from the centre, made with Premier Stagers and Max Jacquet Design at 84 by 84 inches to hold a brick wall above a curved sofa. Inset: a lion in sand tones on a dark ground, finished in diamond dust, the studio's signature layer of crushed glass that catches light from every angle, for a living room in Newport Beach.</p>
