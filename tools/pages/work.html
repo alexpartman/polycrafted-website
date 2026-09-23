@@ -24,6 +24,20 @@
 .mini .meta{font-size:10.5px}
 .trio{display:flex;gap:28px}
 .trio .mini{flex:1;margin:0}
+.ph{cursor:zoom-in}
+.ph img{transition:opacity .25s}
+.ph:hover img{opacity:.92}
+.ph:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.lb{position:fixed;inset:0;z-index:1000;background:#EFECE6;display:flex;align-items:center;justify-content:center;padding:56px 72px}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;max-width:100%;max-height:100%}
+.lb-fig img{max-width:calc(100vw - 144px);max-height:calc(100vh - 140px);width:auto;height:auto;display:block;cursor:zoom-out}
+.lb-fig figcaption{margin-top:16px;font-family:'Instrument Serif',Georgia,serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);white-space:pre}
+.lb button{position:absolute;background:none;border:0;color:var(--ink);cursor:pointer;font-size:26px;line-height:1;padding:14px}
+.lb-x{top:14px;right:18px;font-size:34px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+@media(max-width:699px){.lb{padding:56px 12px 40px}.lb-fig img{max-width:calc(100vw - 24px);max-height:calc(100vh - 150px)}.lb-prev,.lb-next{top:auto;bottom:6px;transform:none}}
 .ed-close{margin:clamp(40px,5vw,80px) 0 0;background:#E4DED3;padding:clamp(56px,7vw,110px) var(--gutter);text-align:center}
 .ed-close h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(32px,3.4vw,52px);line-height:1.08;max-width:24ch;margin:0 auto;color:var(--ink)}
 .ed-close .go{display:inline-flex;gap:14px;align-items:center;margin-top:30px;background:#1A1917;color:#EFECE6;padding:15px 26px;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
@@ -46,68 +60,86 @@
 <section class="ed-flow">
   <div class="sp" style="--gap:3">
     <div class="cap intro" style="--x:0;--y:3;--w:33;--tc:1/-1"><div class="eyebrow">Selected work</div><h1>Made for one room.</h1><p>Each piece was designed around the interior it hangs in: its light, its palette, its scale.</p><a class="more" href="#skull">Explore the work <span>&rarr;</span></a></div>
-    <figure class="ph" style="--x:36;--y:0;--w:44;--r:1.0032;--z:1;--tc:1/-1"><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"></figure>
+    <figure class="ph" data-title="Skull" style="--x:36;--y:0;--w:44;--r:1.0032;--z:1;--tc:1/-1"><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"></figure>
     <div class="cap" id="skull" style="--x:82;--y:18;--w:17;--tc:1/-1"><h3>Skull</h3><span class="rule"></span><p class="meta">Painting on canvas<br>84 x 84 in</p></div>
-    <figure class="ph" style="--x:12;--y:38;--w:36;--r:0.8010;--z:2;--tc:1/9"><img src="images/work/work-leopard.jpg" alt="Large red leopard painting under a pink moon, lit on a dark wall in a living room at night" loading="lazy"></figure>
+    <figure class="ph" data-title="Leopard" style="--x:12;--y:38;--w:36;--r:0.8010;--z:2;--tc:1/9"><img src="images/work/work-leopard.jpg" alt="Large red leopard painting under a pink moon, lit on a dark wall in a living room at night" loading="lazy"></figure>
     <div class="cap" id="leopard" style="--x:0;--y:52;--w:11;--tc:9/13"><h3>Leopard</h3><span class="rule"></span><p class="meta">Painting on canvas<br>Studio render in the space</p></div>
-    <figure class="ph" style="--x:52;--y:50;--w:30;--r:0.8003;--z:1;--tc:5/13"><img src="images/work/work-livingroom-pair.jpg" alt="Two large expressive paintings in black, blue and yellow above a striped console in a bright modern living room" loading="lazy"></figure>
+    <figure class="ph" data-title="Pair" style="--x:52;--y:50;--w:30;--r:0.8003;--z:1;--tc:5/13"><img src="images/work/work-livingroom-pair.jpg" alt="Two large expressive paintings in black, blue and yellow above a striped console in a bright modern living room" loading="lazy"></figure>
     <div class="cap" id="pair" style="--x:84;--y:60;--w:15;--tc:1/5"><h3>Pair</h3><span class="rule"></span><p class="meta">Two paintings on canvas<br>Private residence</p></div>
   </div>
   <div class="sp" style="--gap:3.5">
     <div class="cap stm lg" style="--x:0;--y:4;--w:24;--tc:1/-1"><h2>Art changes the way a room lives.</h2><p>A single work can set the tone, reshape the energy and bring a space into focus. These are moments from real homes, stagings and private collections, each one a collaboration.</p><span class="rule"></span><div class="mini" id="swirl"><h3>Untitled (grey)</h3><p class="meta">Large-scale painting<br>Private residence</p></div></div>
-    <figure class="ph" style="--x:28;--y:0;--w:34;--r:0.6667;--z:1;--tc:1/8"><img src="images/work/swirl-console.jpg" alt="Large black and grey gestural abstract painting above a stone console between two orange armchairs" loading="lazy"></figure>
-    <figure class="ph" style="--x:66;--y:6;--w:30;--r:0.6667;--z:1;--tc:8/13"><img src="images/work/swirl-sofa.jpg" alt="Black and white gestural abstract painting above a beige sofa with rust cushions" loading="lazy"></figure>
+    <figure class="ph" data-title="Untitled (grey)" style="--x:28;--y:0;--w:34;--r:0.6667;--z:1;--tc:1/8"><img src="images/work/swirl-console.jpg" alt="Large black and grey gestural abstract painting above a stone console between two orange armchairs" loading="lazy"></figure>
+    <figure class="ph" data-title="Untitled (black and white)" style="--x:66;--y:6;--w:30;--r:0.6667;--z:1;--tc:8/13"><img src="images/work/swirl-sofa.jpg" alt="Black and white gestural abstract painting above a beige sofa with rust cushions" loading="lazy"></figure>
     <div class="cap" id="swirl-sofa" style="--x:66;--y:53;--w:24;--tc:8/13"><h3>Untitled (black and white)</h3><span class="rule"></span><p class="meta">Large-scale painting<br>Private residence</p></div>
   </div>
   <div class="sp" style="--gap:2.5">
-    <figure class="ph" style="--x:0;--y:0;--w:50;--r:1.3333;--z:1;--tc:1/9"><img src="images/work/script-white-sofa.jpg" alt="Two long black and white script panels above a white sofa" loading="lazy"></figure>
+    <figure class="ph" data-title="Script, two panels" style="--x:0;--y:0;--w:50;--r:1.3333;--z:1;--tc:1/9"><img src="images/work/script-white-sofa.jpg" alt="Two long black and white script panels above a white sofa" loading="lazy"></figure>
     <div class="cap stm" style="--x:53;--y:6;--w:18;--tc:9/13"><h3 class="st">Collected, not decorated.</h3><p>Our work is designed to belong: to the architecture, to the light and to the people who live with it.</p><span class="rule"></span><div class="mini" id="script"><h3>Script, two panels</h3><p class="meta">Acrylic on stretched canvas, built frames<br>24 x 144 in each, 3 in deep<br>Private residence</p></div></div>
-    <figure class="ph" style="--x:73;--y:0;--w:27;--r:0.6667;--z:1;--tc:3/10"><img src="images/work/hearts-graffiti.jpg" alt="Pink, orange and black spray painting of layered heart forms on a grey plaster wall under two spotlights" loading="lazy"></figure>
+    <figure class="ph" data-title="Hearts, pink" style="--x:73;--y:0;--w:27;--r:0.6667;--z:1;--tc:3/10"><img src="images/work/hearts-graffiti.jpg" alt="Pink, orange and black spray painting of layered heart forms on a grey plaster wall under two spotlights" loading="lazy"></figure>
     <div class="cap" id="hearts-graffiti" style="--x:73;--y:42.5;--w:22;--tc:10/13"><h3>Hearts, pink</h3><span class="rule"></span><p class="meta">Spray and enamel on canvas<br>Private residence</p></div>
   </div>
   <div class="sp" style="--gap:3">
-    <figure class="ph" style="--x:15;--y:0;--w:50;--r:1.3333;--z:1;--tc:1/-1"><img src="images/work/hearts-dining.jpg" alt="Three panels of multicolour spray-painted hearts above a lacquered sideboard in a dining room" loading="lazy"></figure>
+    <figure class="ph" data-title="Hearts, dining room" style="--x:15;--y:0;--w:50;--r:1.3333;--z:1;--tc:1/-1"><img src="images/work/hearts-dining.jpg" alt="Three panels of multicolour spray-painted hearts above a lacquered sideboard in a dining room" loading="lazy"></figure>
     <div class="cap" id="hearts-dining" style="--x:0;--y:16;--w:13;--tc:1/5"><h3>Hearts, dining room</h3><span class="rule"></span><p class="meta">Spray and enamel on canvas, three panels<br>Private residence</p></div>
-    <figure class="ph" style="--x:68;--y:4;--w:30;--r:0.7998;--z:1;--tc:5/11"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa in a Newport Beach living room" loading="lazy"></figure>
-    <figure class="ph" style="--x:50;--y:31;--w:16;--r:0.6667;--z:2;--tc:1/6"><img src="images/work/swirl-detail.jpg" alt="Close detail of layered grey and white brush strokes on a black ground" loading="lazy"></figure>
+    <figure class="ph" data-title="Lion, sand colour" style="--x:68;--y:4;--w:30;--r:0.7998;--z:1;--tc:5/11"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa in a Newport Beach living room" loading="lazy"></figure>
+    <figure class="ph" data-title="Untitled (black and white), detail" style="--x:50;--y:31;--w:16;--r:0.6667;--z:2;--tc:1/6"><img src="images/work/swirl-detail.jpg" alt="Close detail of layered grey and white brush strokes on a black ground" loading="lazy"></figure>
     <div class="cap" id="lion" style="--x:68;--y:43.5;--w:22;--tc:11/13"><h3>Lion, sand colour</h3><span class="rule"></span><p class="meta">Diamond dust on canvas<br>38 x 50 in<br>Private residence, Newport Beach</p></div>
     <div class="cap" id="swirl-detail" style="--x:50;--y:57;--w:16;--tc:6/13"><h3>Untitled (black and white), detail</h3><span class="rule"></span><p class="meta">Brush and knife, archival acrylic</p></div>
   </div>
   <div class="sp" style="--gap:3">
-    <figure class="ph" style="--x:0.3;--y:0;--w:78;--r:2.0000;--z:1;--tc:1/-1"><img src="images/work/harrison-sf.jpg" alt="Large gold, black and blue painting above a curved white sofa in a penthouse living room with a view of the bay" loading="lazy"></figure>
+    <figure class="ph" data-title="The Harrison" style="--x:0.3;--y:0;--w:78;--r:2.0000;--z:1;--tc:1/-1"><img src="images/work/harrison-sf.jpg" alt="Large gold, black and blue painting above a curved white sofa in a penthouse living room with a view of the bay" loading="lazy"></figure>
     <div class="cap" id="harrison" style="--x:82;--y:10;--w:17;--tc:1/-1"><h3>The Harrison</h3><span class="rule"></span><p class="meta">Large-scale painting<br>The Harrison, San Francisco</p></div>
   </div>
   <div class="sp" style="--gap:2.5">
-    <figure class="ph" style="--x:0.3;--y:4;--w:28;--r:1.0000;--z:1;--tc:1/6"><img src="images/work/words-black-gold.jpg" alt="Black and silver text painting between two black leather armchairs" loading="lazy"></figure>
+    <figure class="ph" data-title="Words" style="--x:0.3;--y:4;--w:28;--r:1.0000;--z:1;--tc:1/6"><img src="images/work/words-black-gold.jpg" alt="Black and silver text painting between two black leather armchairs" loading="lazy"></figure>
     <div class="cap" id="words" style="--x:0.3;--y:34;--w:24;--tc:6/9"><h3>Words</h3><span class="rule"></span><p class="meta">Text painting on canvas<br>Private residence</p></div>
-    <figure class="ph" style="--x:31;--y:0;--w:26;--r:0.7140;--z:1;--tc:9/13"><img src="images/work/ali-bag.jpg" alt="Hand-painted heavy bag with a portrait of a boxer in a home gym with a city view" loading="lazy"></figure>
+    <figure class="ph" data-title="Painted heavy bag" style="--x:31;--y:0;--w:26;--r:0.7140;--z:1;--tc:9/13"><img src="images/work/ali-bag.jpg" alt="Hand-painted heavy bag with a portrait of a boxer in a home gym with a city view" loading="lazy"></figure>
     <div class="cap" id="ali-bag" style="--x:59.5;--y:4;--w:13;--tc:1/6"><h3>Painted heavy bag</h3><span class="rule"></span><p class="meta">Object<br>The Harrison, San Francisco</p></div>
-    <figure class="ph" style="--x:74;--y:10;--w:26;--r:1.0032;--z:1;--tc:6/10"><img src="images/work/harrison-trunks.jpg" alt="Stack of white trunks hand-lettered in black with The Harrison" loading="lazy"></figure>
+    <figure class="ph" data-title="Painted trunks" style="--x:74;--y:10;--w:26;--r:1.0032;--z:1;--tc:6/10"><img src="images/work/harrison-trunks.jpg" alt="Stack of white trunks hand-lettered in black with The Harrison" loading="lazy"></figure>
     <div class="cap" id="trunks" style="--x:74;--y:38;--w:22;--tc:10/13"><h3>Painted trunks</h3><span class="rule"></span><p class="meta">Objects<br>The Harrison, San Francisco</p></div>
   </div>
   <div class="sp" style="--gap:3.5">
-    <figure class="ph" style="--x:0.7;--y:0;--w:48;--r:2.0000;--z:1;--tc:1/9"><img src="images/work/black-heart-kitchen.jpg" alt="Large black heart with gold drips on a white wall beside a dining table with a view of the city" loading="lazy"></figure>
-    <figure class="ph" style="--x:51;--y:2;--w:20;--r:0.6667;--z:1;--tc:9/13"><img src="images/work/black-heart-table.jpg" alt="Black heart with gold drips behind a table of candy jars under a sculptural chandelier" loading="lazy"></figure>
+    <figure class="ph" data-title="Black heart" style="--x:0.7;--y:0;--w:48;--r:2.0000;--z:1;--tc:1/9"><img src="images/work/black-heart-kitchen.jpg" alt="Large black heart with gold drips on a white wall beside a dining table with a view of the city" loading="lazy"></figure>
+    <figure class="ph" data-title="Black heart, detail" style="--x:51;--y:2;--w:20;--r:0.6667;--z:1;--tc:9/13"><img src="images/work/black-heart-table.jpg" alt="Black heart with gold drips behind a table of candy jars under a sculptural chandelier" loading="lazy"></figure>
     <div class="cap stm" style="--x:74;--y:5;--w:25;--tc:1/-1"><h3 class="st">Objects &amp; moments</h3><p>From large-scale commissions to small, personal works, each piece is part of a larger story.</p><span class="rule"></span><div class="mini" id="black-heart"><h3>Black heart</h3><p class="meta">Built wood frame, canvas, matte black, hand lettering, gilded feather arrows<br>The Harrison, San Francisco</p></div><div class="mini" id="black-heart-table"><h3>Black heart, detail</h3><p class="meta">Built wood frame, canvas, matte black, hand lettering, gilded feather arrows<br>The Harrison, San Francisco</p></div></div>
   </div>
   <div class="sp" style="--gap:3">
-    <figure class="ph" style="--x:0.5;--y:6;--w:18;--r:1.0000;--z:1;--tc:1/5"><img src="images/work/couple-red.jpg" alt="Painting of a seated couple in black, pink and red between two leather chairs" loading="lazy"></figure>
-    <figure class="ph" style="--x:19.5;--y:0;--w:15;--r:1.0000;--z:1;--tc:5/9"><img src="images/work/couple-flowers.jpg" alt="Painting of a couple among flowers on a pink ground" loading="lazy"></figure>
-    <figure class="ph" style="--x:35.5;--y:5;--w:18;--r:1.0000;--z:1;--tc:9/13"><img src="images/work/riders-red.jpg" alt="Painting of two riders on a black horse against a red landscape" loading="lazy"></figure>
+    <figure class="ph" data-title="Two, in red" style="--x:0.5;--y:6;--w:18;--r:1.0000;--z:1;--tc:1/5"><img src="images/work/couple-red.jpg" alt="Painting of a seated couple in black, pink and red between two leather chairs" loading="lazy"></figure>
+    <figure class="ph" data-title="Garden, in pink" style="--x:19.5;--y:0;--w:15;--r:1.0000;--z:1;--tc:5/9"><img src="images/work/couple-flowers.jpg" alt="Painting of a couple among flowers on a pink ground" loading="lazy"></figure>
+    <figure class="ph" data-title="Riders" style="--x:35.5;--y:5;--w:18;--r:1.0000;--z:1;--tc:9/13"><img src="images/work/riders-red.jpg" alt="Painting of two riders on a black horse against a red landscape" loading="lazy"></figure>
     <div class="cap" style="--x:0.7;--y:27;--w:52;--tc:1/-1"><div class="trio"><div class="mini" id="couple"><h3>Two, in red</h3><p class="meta">Painting on canvas<br>Private residence</p></div><div class="mini" id="couple-flowers"><h3>Garden, in pink</h3><p class="meta">Painting on canvas</p></div><div class="mini" id="riders"><h3>Riders</h3><p class="meta">Painting on canvas</p></div></div></div>
-    <figure class="ph" style="--x:58;--y:0;--w:28;--r:0.8091;--z:1;--tc:1/8"><img src="images/work/constellation-hallway.jpg" alt="Large black painting of concentric heart forms above a black console in a white entry hall" loading="lazy"></figure>
+    <figure class="ph" data-title="Constellation" style="--x:58;--y:0;--w:28;--r:0.8091;--z:1;--tc:1/8"><img src="images/work/constellation-hallway.jpg" alt="Large black painting of concentric heart forms above a black console in a white entry hall" loading="lazy"></figure>
     <div class="cap" id="constellation" style="--x:88;--y:10;--w:12;--tc:8/13"><h3>Constellation</h3><span class="rule"></span><p class="meta">Large-scale painting<br>Entry hall, private residence</p></div>
   </div>
   <div class="sp" style="--gap:0">
-    <figure class="ph" style="--x:0;--y:0;--w:36;--r:0.8722;--z:1;--tc:1/8"><img src="images/work/studio-vortex-bw.jpg" alt="The artist in the studio in front of a large vortex painting" loading="lazy"></figure>
+    <figure class="ph" data-title="Vortex" style="--x:0;--y:0;--w:36;--r:0.8722;--z:1;--tc:1/8"><img src="images/work/studio-vortex-bw.jpg" alt="The artist in the studio in front of a large vortex painting" loading="lazy"></figure>
     <div class="cap" id="vortex" style="--x:39;--y:12;--w:16;--tc:8/13"><h3>Vortex</h3><span class="rule"></span><p class="meta">Large-scale painting<br>The studio, Los Angeles</p></div>
-    <figure class="ph" style="--x:58;--y:0;--w:28;--r:0.7503;--z:1;--tc:1/8"><img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" loading="lazy"></figure>
+    <figure class="ph" data-title="Revenge" style="--x:58;--y:0;--w:28;--r:0.7503;--z:1;--tc:1/8"><img src="images/work/revenge.jpg" alt="Large black and white text painting in a client's home" loading="lazy"></figure>
     <div class="cap" id="revenge" style="--x:88;--y:8;--w:12;--tc:8/13"><h3>Revenge</h3><span class="rule"></span><p class="meta">Text painting on canvas<br>Private residence, Los Angeles</p></div>
   </div>
 </section>
 <script>
 (function(){function lay(){var d=innerWidth>=1100;document.querySelectorAll('.sp').forEach(function(sp){if(!d){sp.style.height='';return}var b=0,t=sp.getBoundingClientRect().top;for(var i=0;i<sp.children.length;i++){var r=sp.children[i].getBoundingClientRect();b=Math.max(b,r.bottom-t)}sp.style.height=Math.ceil(b)+'px'})}
 addEventListener('load',lay);addEventListener('resize',lay);document.fonts&&document.fonts.ready.then(lay);lay()})();
+</script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-x" type="button" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous">&larr;</button>
+  <figure class="lb-fig"><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav lb-next" type="button" aria-label="Next">&rarr;</button>
+</div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('figcaption'),figs=[].slice.call(document.querySelectorAll('.ed-flow .ph')),i=0,sx=null;
+function show(k){i=(k+figs.length)%figs.length;var f=figs[i],src=f.querySelector('img');im.src=src.getAttribute('src');im.alt=src.alt;cp.textContent=f.getAttribute('data-title')+'   '+(i+1)+' / '+figs.length}
+function open(k){show(k);lb.hidden=false;document.documentElement.style.overflow='hidden';lb.querySelector('.lb-x').focus()}
+function close(){lb.hidden=true;document.documentElement.style.overflow='';figs[i].focus()}
+figs.forEach(function(f,k){f.tabIndex=0;f.setAttribute('role','button');f.setAttribute('aria-label','View larger: '+f.getAttribute('data-title'));f.addEventListener('click',function(){open(k)});f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(k)}})});
+lb.querySelector('.lb-x').onclick=close;lb.querySelector('.lb-prev').onclick=function(e){e.stopPropagation();show(i-1)};lb.querySelector('.lb-next').onclick=function(e){e.stopPropagation();show(i+1)};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-fig'))close()});
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1)});
+lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(d<0?i+1:i-1);sx=null});
+})();
 </script>
 
 <section class="ed-close">
