@@ -9,7 +9,9 @@
 .ed-head figure{margin:0}
 .ed-head img{width:100%;height:auto;display:block}
 .sp{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto 1fr;gap:0 24px;align-items:start;margin-bottom:clamp(64px,9vw,140px)}
-.sp figure{margin:0;background:transparent;box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
+.sp figure{margin:0;background:transparent}
+.sp figure img{box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
+.sp figcaption{margin-top:12px;font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);line-height:1.5}
 .sp figure img{width:100%;height:auto;display:block}
 .sp .txt{align-self:start;padding:4% 0 0}
 .sp .txt h2{font-size:clamp(24px,2.4vw,34px);line-height:1.1;margin-bottom:14px}
@@ -20,7 +22,7 @@
 /* main image */
 .sp .main{grid-column:1/9;grid-row:1/3}
 .sp .txt{grid-column:9/13;grid-row:1;padding-left:8px}
-.sp .det{grid-column:9/13;grid-row:2;align-self:start;margin-top:40px;box-shadow:0 30px 60px -30px rgba(26,25,23,.35)}
+.sp .det{grid-column:9/13;grid-row:2;align-self:start;margin-top:40px}
 /* flipped */
 .sp.r .main{grid-column:5/13;grid-row:1/3}
 .sp.r .txt{grid-column:1/5}
@@ -55,8 +57,8 @@
   </div>
 
   <div class="sp r" id="harrison">
-    <figure class="main"><img src="images/work/hearts-dining.jpg" alt="Three panels of multicolour spray-painted hearts above a lacquered sideboard in a dining room" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/hearts-graffiti.jpg" alt="Pink and orange layered hearts on a grey plaster wall" loading="lazy"></figure>
+    <figure class="main"><img src="images/work/hearts-dining.jpg" alt="Three panels of multicolour spray-painted hearts above a lacquered sideboard in a dining room" loading="lazy"><figcaption>Three heart panels above the sideboard</figcaption></figure>
+    <figure class="det"><img src="images/work/hearts-graffiti.jpg" alt="Pink and orange layered hearts on a grey plaster wall" loading="lazy"><figcaption>Detail: layered hearts, pink and orange</figcaption></figure>
     <div class="txt">
       <h2>The Dining Room</h2>
       <p>Under a plaster ceiling and a chandelier of capiz discs, three canvases of hearts run the length of a chinoiserie sideboard, sprayed, drawn and sprayed again in pink, chartreuse, violet and white until the surface hums. Black outlines hold the chaos together. The panels are staggered, the largest set a few inches forward, so from the table the wall reads as a single work and from up close as three. In a room of lacquer, gilt and shadow, this is the light source.</p>
@@ -66,8 +68,8 @@
   </div>
 
   <div class="sp" id="swirl">
-    <figure class="main tall"><img src="images/work/swirl-console.jpg" alt="Large black and grey gestural abstract painting above a stone console between two orange armchairs" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/swirl-detail.jpg" alt="Close detail of layered grey and white brush strokes on a black ground" loading="lazy"></figure>
+    <figure class="main tall"><img src="images/work/swirl-console.jpg" alt="Large black and grey gestural abstract painting above a stone console between two orange armchairs" loading="lazy"><figcaption>The painting between the sconces</figcaption></figure>
+    <figure class="det"><img src="images/work/swirl-detail.jpg" alt="Close detail of layered grey and white brush strokes on a black ground" loading="lazy"><figcaption>Detail: brush strokes on the black ground</figcaption></figure>
     <div class="txt">
       <h2>The Living Room</h2>
       <p>Between two brass sconces, a painting that behaves like weather. Translucent strokes of grey, bone and warm black are laid over a black ground in wide sweeps, each pass left visible beneath the next, until the surface reads as folded silk or smoke caught mid-turn. The palette was kept deliberately quiet so that the plaster walls, the stone credenza and the rust velvet chairs could each keep their voice; the scale, filling the alcove from sconce to sconce, does the talking.</p>
@@ -77,8 +79,8 @@
   </div>
 
   <div class="sp r" id="swirl-sofa">
-    <figure class="main tall"><img src="images/work/swirl-sofa.jpg" alt="Black and white gestural abstract painting above a beige sofa with rust cushions" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/swirl-sofa-close.jpg" alt="Close view of the black and white painting above the sofa" loading="lazy"></figure>
+    <figure class="main tall"><img src="images/work/swirl-sofa.jpg" alt="Black and white gestural abstract painting above a beige sofa with rust cushions" loading="lazy"><figcaption>The canvas above the sofa</figcaption></figure>
+    <figure class="det"><img src="images/work/swirl-sofa-close.jpg" alt="Close view of the black and white painting above the sofa" loading="lazy"><figcaption>Detail: the same canvas, close</figcaption></figure>
     <div class="txt">
       <h2>California Modern</h2>
       <p>Warm oak, cast stone, a tobacco leather pouf and a sofa the colour of sand: a room built entirely from earth tones, with a single cool note. The canvas above the sofa moves in a loose spiral of white and grey over black, worked with wide brushes and knives so the marks stay crisp at the edges and cloud in the centre. The raw canvas edge is left exposed. Against all that warmth, the black and white reads as the room's one decision.</p>
@@ -88,8 +90,8 @@
   </div>
 
   <div class="sp" id="script">
-    <figure class="main"><img src="images/work/script-white-sofa.jpg" alt="Two long black and white script panels above a white sofa" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/harrison-trunks.jpg" alt="Stack of white trunks hand-lettered in black" loading="lazy"></figure>
+    <figure class="main"><img src="images/work/script-white-sofa.jpg" alt="Two long black and white script panels above a white sofa" loading="lazy"><figcaption>The two script panels, 24 x 144 in each</figcaption></figure>
+    <figure class="det"><img src="images/work/harrison-trunks.jpg" alt="Stack of white trunks hand-lettered in black" loading="lazy"><figcaption>Related piece: hand-lettered trunks, The Harrison</figcaption></figure>
     <div class="txt">
       <h2>Script, Two Panels</h2>
       <p>A designer arrived with a reference: a calligraphic street language the client had fallen for. The studio learned its rhythm, its marks and its density, then composed something new in that spirit, an original work rather than a copy. The result is two panels, each two feet by twelve, stretched over three-inch built frames. The ground is layered white, off-white and beige for the look of aged paper; every black character was painted freehand in acrylic. Below, hand-lettered trunks made for The Harrison, San Francisco.</p>
@@ -109,8 +111,8 @@
   </div>
 
   <div class="sp" id="black-heart">
-    <figure class="main"><img src="images/work/black-heart-kitchen.jpg" alt="Large black heart with gold drips on a white wall beside a dining table with a view of the city" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/black-heart-table.jpg" alt="Black heart with gold arrows behind a table of candy jars under a sculptural chandelier" loading="lazy"></figure>
+    <figure class="main"><img src="images/work/black-heart-kitchen.jpg" alt="Large black heart with gold drips on a white wall beside a dining table with a view of the city" loading="lazy"><figcaption>The black heart, seen from the dining table</figcaption></figure>
+    <figure class="det"><img src="images/work/black-heart-table.jpg" alt="Black heart with gold arrows behind a table of candy jars under a sculptural chandelier" loading="lazy"><figcaption>The same piece: gilded arrows on the frame</figcaption></figure>
     <div class="txt">
       <h2>Kitchen View</h2>
       <p>Commissioned by a designer staging a penthouse at The Harrison, and built rather than painted. A deep wooden frame, thick as a chocolate box, was stretched with canvas and finished in matte black for a velvet surface. A poem runs around the entire perimeter in white hand lettering. The arrows are carved in wood, fletched with real feathers, gilded and nailed straight into the frame. Hung beside a dining table with the city behind it, it is playful from a distance and precise up close.</p>
@@ -120,8 +122,8 @@
   </div>
 
   <div class="sp r" id="words">
-    <figure class="main sq"><img src="images/work/words-black-gold.jpg" alt="Black and silver text painting between two black leather armchairs" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/revenge.jpg" alt="Large black and white text painting reading Revenge" loading="lazy"></figure>
+    <figure class="main sq"><img src="images/work/words-black-gold.jpg" alt="Black and silver text painting between two black leather armchairs" loading="lazy"><figcaption>Silver on black text painting, the lounge</figcaption></figure>
+    <figure class="det"><img src="images/work/revenge.jpg" alt="Large black and white text painting reading Revenge" loading="lazy"><figcaption>Separate piece: Revenge, black on white</figcaption></figure>
     <div class="txt">
       <h2>Words</h2>
       <p>A lounge of black leather Chesterfields, brass tables and cowhide asked for a painting with the same swagger. Rows of exclamations in a bold, worn sans serif are painted in silver over black, so the words surface and sink as the light moves across the room. Below it, Revenge: one word broken across three lines in heavy black capitals on a white, plaster-textured ground, painted large enough to own a wall in a Los Angeles residence.</p>
@@ -131,9 +133,9 @@
   </div>
 
   <div class="sp trio" id="figurative">
-    <figure class="a"><img src="images/work/couple-red.jpg" alt="Painting of a seated couple in black, pink and red between two leather chairs" loading="lazy"></figure>
-    <figure class="b"><img src="images/work/couple-flowers.jpg" alt="Painting of a couple among flowers on a pink ground" loading="lazy"></figure>
-    <figure class="c"><img src="images/work/riders-red.jpg" alt="Painting of two riders on a black horse against a red landscape" loading="lazy"></figure>
+    <figure class="a"><img src="images/work/couple-red.jpg" alt="Painting of a seated couple in black, pink and red between two leather chairs" loading="lazy"><figcaption>Seated couple, black, pink and red</figcaption></figure>
+    <figure class="b"><img src="images/work/couple-flowers.jpg" alt="Painting of a couple among flowers on a pink ground" loading="lazy"><figcaption>Couple among flowers, pink ground</figcaption></figure>
+    <figure class="c"><img src="images/work/riders-red.jpg" alt="Painting of two riders on a black horse against a red landscape" loading="lazy"><figcaption>Two riders, red landscape</figcaption></figure>
     <div class="txt">
       <h2>Figurative Works</h2>
       <p>Dense black line against grounds of red and pink: a seated couple, the man in a hat and pale suit; a pair among flowers under a violet sky; two riders on a black horse crossing a red landscape. The palette is deliberately limited and the line is unafraid. In interiors of leather, rug and lacquer, these canvases bring the one thing a room cannot get from furniture, a face.</p>
@@ -143,8 +145,8 @@
   </div>
 
   <div class="sp" id="skull">
-    <figure class="main sq"><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa" loading="lazy"></figure>
+    <figure class="main sq"><img src="images/work/skull-spin.jpg" alt="Large multicolour spin painting of a skull above a curved sofa" loading="lazy"><figcaption>Spin painting of a skull, 84 x 84 in</figcaption></figure>
+    <figure class="det"><img src="images/work/lion-newport.jpg" alt="Diamond dust painting of a lion above a white sofa" loading="lazy"><figcaption>Separate piece: lion in diamond dust, 38 x 50 in</figcaption></figure>
     <div class="txt">
       <h2>Colour, at Scale</h2>
       <p>A skull dissolving into a burst of orange, pink, cobalt and green, the colour thrown outward from the centre, made with Premier Stagers and Max Jacquet Design at 84 by 84 inches to hold a brick wall above a curved sofa in a double-height room. Inset, its opposite in temperature: a lion in sand tones on a dark ground for a living room in Newport Beach, finished in diamond dust, the studio's signature layer of crushed glass that catches the light from every angle and changes as you cross the room.</p>
@@ -153,19 +155,18 @@
     </div>
   </div>
 
-  <div class="sp r" id="black-white">
-    <figure class="main"><img src="images/work/constellation-hallway.jpg" alt="Large black painting of concentric heart forms above a black console in a white entry hall" loading="lazy"></figure>
-    <figure class="det"><img src="images/work/studio-vortex-bw.jpg" alt="The artist in the studio in front of a large vortex painting" loading="lazy"></figure>
+  <div class="sp r nodet" id="black-white">
+    <figure class="main"><img src="images/work/constellation-hallway.jpg" alt="Large black painting of concentric heart forms above a black console in a white entry hall" loading="lazy"><figcaption>Concentric hearts, black on black, entry hall</figcaption></figure>
     <div class="txt">
       <h2>Black and White</h2>
-      <p>For an entry hall in white and black, concentric heart forms painted black on black, so that from the door the piece reads first as a shape and only then as an image. Near-monochrome, sized to the console beneath it, it is the first thing a guest sees and the last thing they place. Inset, the studio in Los Angeles: a large vortex in black and white, a form the studio returns to at whatever scale the wall asks for.</p>
-      <div class="spec">Mixed media on canvas<br>Private residence &middot; The studio, Los Angeles</div>
+      <p>For an entry hall in white and black, concentric heart forms painted black on black, so that from the door the piece reads first as a shape and only then as an image. Near-monochrome, sized to the console beneath it, it is the first thing a guest sees and the last thing they place.</p>
+      <div class="spec">Mixed media on canvas<br>Private residence</div>
       <div class="num">10</div>
     </div>
   </div>
 
   <div class="sp nodet" id="objects">
-    <figure class="main tall" style="grid-column:1/6"><img src="images/work/ali-bag.jpg" alt="Hand-painted heavy bag with a portrait of a boxer in a home gym with a city view" loading="lazy"></figure>
+    <figure class="main tall" style="grid-column:1/6"><img src="images/work/ali-bag.jpg" alt="Hand-painted heavy bag with a portrait of a boxer in a home gym with a city view" loading="lazy"><figcaption>Hand-painted heavy bag, home gym</figcaption></figure>
     <div class="txt" style="grid-column:7/12">
       <h2>Objects</h2>
       <p>Not every wall is a wall. For a home gym at The Harrison, a heavy bag was hand-painted with a portrait in black on white, with lettering and drips, so that hanging still it reads as sculpture. The studio paints on what the room offers: leather, wood, canvas, metal, trunks, whatever the space calls for.</p>
